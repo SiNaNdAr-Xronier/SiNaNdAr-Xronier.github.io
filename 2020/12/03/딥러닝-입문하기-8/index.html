@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>딥러닝-입문하기-8 - Xeoner&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Xeoner&#039;s Blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Xeoner&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="오디오 딥러닝 해보기Reference Digital Signal Processing Lecture https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;spatialaudio&amp;#x2F;digital-signal-processing-lecture   Python for Signal Processing (unipingco) https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;unpingco&amp;#x2F;Python-f"><meta property="og:type" content="blog"><meta property="og:title" content="딥러닝-입문하기-8"><meta property="og:url" content="http://example.com/2020/12/03/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%ED%95%98%EA%B8%B0-8/"><meta property="og:site_name" content="Xeoner&#039;s Blog"><meta property="og:description" content="오디오 딥러닝 해보기Reference Digital Signal Processing Lecture https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;spatialaudio&amp;#x2F;digital-signal-processing-lecture   Python for Signal Processing (unipingco) https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;unpingco&amp;#x2F;Python-f"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://example.com/cover/audio_sym.jpg"><meta property="article:published_time" content="2020-12-03T08:02:23.000Z"><meta property="article:modified_time" content="2022-04-05T06:20:15.755Z"><meta property="article:author" content="Xeoner"><meta property="article:tag" content="DL"><meta property="article:tag" content="Audio"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://example.com/cover/audio_sym.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2020/12/03/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%ED%95%98%EA%B8%B0-8/"},"headline":"딥러닝-입문하기-8","image":["http://example.com/cover/audio_sym.jpg"],"datePublished":"2020-12-03T08:02:23.000Z","dateModified":"2022-04-05T06:20:15.755Z","author":{"@type":"Person","name":"Xeoner"},"publisher":{"@type":"Organization","name":"Xeoner's Blog","logo":{"@type":"ImageObject","url":"http://example.com/img/logo.svg"}},"description":"오디오 딥러닝 해보기Reference Digital Signal Processing Lecture https:&#x2F;&#x2F;github.com&#x2F;spatialaudio&#x2F;digital-signal-processing-lecture   Python for Signal Processing (unipingco) https:&#x2F;&#x2F;github.com&#x2F;unpingco&#x2F;Python-f"}</script><link rel="canonical" href="http://example.com/2020/12/03/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%ED%95%98%EA%B8%B0-8/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;600&amp;family=Roboto+Mono"><link data-pjax rel="stylesheet" href="/css/cyberpunk.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-M6KHR911M6" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-M6KHR911M6');</script><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Xeoner&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2020-12-03T08:02:23.000Z" title="2020. 12. 3. 오후 5:02:23">2020-12-03</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-04-05T06:20:15.755Z" title="2022. 4. 5. 오후 3:20:15">2022-04-05</time></span><span class="level-item"><a class="link-muted" href="/categories/Study/">Study</a></span><span class="level-item">8 minutes read (About 1228 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">딥러닝-입문하기-8</h1><div class="content"><h3 id="오디오-딥러닝-해보기"><a href="#오디오-딥러닝-해보기" class="headerlink" title="오디오 딥러닝 해보기"></a>오디오 딥러닝 해보기</h3><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul>
+<li><p>Digital Signal Processing Lecture <a target="_blank" rel="noopener" href="https://github.com/spatialaudio/digital-signal-processing-lecture">https://github.com/spatialaudio/digital-signal-processing-lecture</a> </p>
+</li>
+<li><p>Python for Signal Processing (unipingco) <a target="_blank" rel="noopener" href="https://github.com/unpingco/Python-for-Signal-Processing">https://github.com/unpingco/Python-for-Signal-Processing</a> </p>
+</li>
+<li><p>Audio for Deep Learning (남기현님) <a target="_blank" rel="noopener" href="https://tykimos.github.io/2019/07/04/ISS_2nd_Deep_Learning_Conference_All_Together/">https://tykimos.github.io/2019/07/04/ISS_2nd_Deep_Learning_Conference_All_Together/</a> </p>
+</li>
+<li><p>오디오 전처리 작업을 위한 연습 (박수철님) <a target="_blank" rel="noopener" href="https://github.com/scpark20/audio-preprocessing-practice">https://github.com/scpark20/audio-preprocessing-practice</a> </p>
+</li>
+<li><p>Musical Applications of Machine Learning <a target="_blank" rel="noopener" href="https://mac.kaist.ac.kr/~juhan/gct634/">https://mac.kaist.ac.kr/~juhan/gct634/</a> </p>
+</li>
+<li><p>Awesome audio study materials for Korean (최근우님) <a target="_blank" rel="noopener" href="https://github.com/keunwoochoi/awesome-audio-study-materials-for-korean">https://github.com/keunwoochoi/awesome-audio-study-materials-for-korean</a></p>
+</li>
+<li><p>T Academy(출처) <a target="_blank" rel="noopener" href="https://tacademy.skplanet.com/live/player/onlineLectureDetail.action?seq=178">https://tacademy.skplanet.com/live/player/onlineLectureDetail.action?seq=178</a></p>
+</li>
+</ul>
+<h2 id="1-Digital-Signal-Processing"><a href="#1-Digital-Signal-Processing" class="headerlink" title="1. Digital Signal Processing"></a>1. Digital Signal Processing</h2><p>소리 signal를 어떠한 데이터 타입으로 표현하며, 소리와 관련된 task를 해결하는데 있습니다. 그렇다면 소리는 어떠한 데이터를 가지고 있을까요?</p>
+<h3 id="Sound"><a href="#Sound" class="headerlink" title="Sound?"></a>Sound?</h3><p>소리는 일반적으로 진동으로 인한 공기의 압축으로 생성됩니다. 그렇다면 압축이 얼마나 됬느냐에 따라서 표현되것이 바로 Wave(파동)인데요. 파동은 진동하며 공간&#x2F;매질을 전파해 나가는 현상입니다. 질량의 이동은 없지만 에너지&#x2F;운동량의 운반은 존재합니다.</p>
+<p>Wave에서 저희가 얻을수 있는 정보는 크게 3가지가 있습니다.</p>
+<ul>
+<li>Phase(Degress of displacement) : 위상</li>
+<li>Amplitude(Intensity) : 진폭</li>
+<li>Frequency : 주파수</li>
+</ul>
+<h3 id="Sampling"><a href="#Sampling" class="headerlink" title="Sampling"></a>Sampling</h3><p>샘플링은 무엇일까요?? 아날로그 정보를 잘게 쪼개서 discrete한 디지털 정보로 표현해야합니다. 우리는 무한하게 쪼개서 저장할수 없으니, 어떤 기준을 가지고 아날로그 정보를 쪼개서 대표값을 취하게 됩니다.</p>
+<p><code>Convert into a sqeuence of binary values via Sampling and Quantization</code></p>
+<h3 id="1-1-Time-domain"><a href="#1-1-Time-domain" class="headerlink" title="1.1. Time domain"></a>1.1. Time domain</h3><p>시간을 기준으로 아날로그 시그널을 쪼개게 되는 것을 의미합니다. Sampling을 통하여 컴퓨터는 소리 sequence를 binary value로 받아드리게 됩니다.</p>
+<p><strong>Sampling rate : 얼마나 잘게 쪼갤 것인가?</strong><br><br>잘개 쪼갤수록 원본 데이터와 거이 가까워지기 떄문에 좋지만 Data의 양이 증가하게 됩니다. 만약 너무 크게 쪼개게 된다면, 원본 데이터로 reconstruct하기 힘들어 질 것입니다.</p>
+<p><strong>Sampling theorem</strong><br><br>샘플링 레이트가 최대 frequency의 2배 보다 커져야 한다는 것입니다.<br>\( f_{s} &gt; 2f_{m} \) 여기서 \(f_{s}\)는 sampling rate, 그리고 \(f_{m}\)은 maximum frequency를 말합니다.</p>
+<ul>
+<li>Nyqusit frequency &#x3D; \(f_{s}&#x2F;2\), sampling rate의 절반입니다.</li>
+</ul>
+<p>일반적으로 Sampling은 인간의 청각 영역에 맞게 형성이 됩니다.</p>
+<ul>
+<li>Audio CD : 44.1 kHz(44100 sample&#x2F;second)</li>
+<li>Speech communication : 8 kHz(8000 sample&#x2F;second)</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># library load</span></span><br><span class="line"><span class="keyword">import</span> soundfile <span class="keyword">as</span> sf</span><br><span class="line"><span class="keyword">import</span> librosa</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">filename = <span class="string">&quot;./wav/voice.wav&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 파일 로드 방법 1</span></span><br><span class="line">y, sr = sf.read(filename, dtype=<span class="string">&#x27;int16&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Sample Rate: &quot;</span>, sr)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;DATA: &quot;</span>, <span class="built_in">type</span>(y), y.shape, <span class="built_in">len</span>(y), y)</span><br><span class="line"></span><br><span class="line">dur = <span class="built_in">len</span>(y) / sr</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;dur : &quot;</span>, dur)</span><br></pre></td></tr></table></figure>
+
+<pre><code>Sample Rate:  16000
+DATA:  &lt;class &#39;numpy.ndarray&#39;&gt; (48944,) 48944 [ -9   1  -5 ... -20 -16 -24]
+dur :  3.059
+</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 파일 로드 방법 2</span></span><br><span class="line">y, sr = librosa.load(filename, mono=<span class="literal">True</span>, sr=<span class="number">16000</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Sample Rate: &quot;</span>, sr)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;DATA: &quot;</span>, <span class="built_in">type</span>(y), y.shape, y)</span><br><span class="line">dur = <span class="built_in">len</span>(y) / sr</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;dur : &quot;</span>, dur)</span><br></pre></td></tr></table></figure>
+
+<pre><code>Sample Rate:  16000
+DATA:  &lt;class &#39;numpy.ndarray&#39;&gt; (48944,) [-2.7465820e-04  3.0517578e-05 -1.5258789e-04 ... -6.1035156e-04
+ -4.8828125e-04 -7.3242188e-04]
+dur :  3.059
+</code></pre>
+<h3 id="Resampling"><a href="#Resampling" class="headerlink" title="Resampling"></a>Resampling</h3><p>샘플링된 데이터를 다시금 더 높은 sampling rate 혹은 더 낮은 sampling rate로 다시 샘플링할수 있습니다. 이때는 일반적으로 interpolation(보간)을 할때는 low-pass filter를 사용합니다.(Windowed sinc function)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> IPython.display <span class="keyword">as</span> ipd</span><br><span class="line">y_8k = librosa.resample(y, sr, <span class="number">8000</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipd.Audio(y_8k, rate=<span class="number">8000</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">len</span>(y_8k)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>24472
+</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># duration</span></span><br><span class="line"><span class="built_in">len</span>(y_8k)/<span class="number">8000</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>3.059
+</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">y_2k = librosa.resample(y, sr, <span class="number">4000</span>)</span><br><span class="line">ipd.Audio(y_2k, rate=<span class="number">2000</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">len</span>(y_2k)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>12236
+</code></pre>
+<h3 id="Nomalization-Quantization"><a href="#Nomalization-Quantization" class="headerlink" title="Nomalization &amp; Quantization"></a>Nomalization &amp; Quantization</h3><p>시간의 기준이 아닌 실제 amplitude의 real valued 를 기준으로 시그널의 값을 조절합니다. Amplitude를 이산적인 구간으로 나누고, signal 데이터의 Amplitude를 반올림하게 됩니다.</p>
+<p>그렇다면 이산적인 구간은 어떻게 나눌수 있을까요?, bit의 비트에 의해서 결정됩니다. </p>
+<ul>
+<li>B bit의 Quantization : \(-2^{B-1}\) ~ \(2^{B-1}-1\)</li>
+<li>Audio CD의 Quantization (16 bits) : \(-2^{15}\) ~ \(2^{15}-1\)</li>
+<li>위 값들은 보통 -1.0 ~ 1.0  영역으로 scaling되기도 합니다.</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Normalize</span></span><br><span class="line">normed_wav = y / <span class="built_in">max</span>(np.<span class="built_in">abs</span>(y))</span><br><span class="line">ipd.Audio(normed_wav, rate=sr)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#quantization 하면 음질은 떨어지지만 light한 자료형이 된다.</span></span><br><span class="line">Bit = <span class="number">8</span></span><br><span class="line">max_value = <span class="number">2</span> ** (Bit-<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">quantized_8_wav = normed_wav * max_value</span><br><span class="line">quantized_8_wav = np.<span class="built_in">round</span>(quantized_8_wav).astype(<span class="built_in">int</span>)</span><br><span class="line">quantized_8_wav = np.clip(quantized_8_wav, -max_value, max_value-<span class="number">1</span>)</span><br><span class="line">ipd.Audio(quantized_8_wav, rate=sr)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="mu-law-encoding"><a href="#mu-law-encoding" class="headerlink" title="mu-law encoding"></a>mu-law encoding</h3><p>사람의 귀는 소리의 amplitude에 대해 log적으로 반응합니다. 즉, 작은소리의 차이는 잘잡아내는데 반해 소리가 커질수록 그 차이를 잘 느끼지 못합니다. 이러한 특성을 wave값을 표현하는데 반영해서 작은값에는 높은 분별력(high resolution)을, 큰값끼리는 낮은 분별력(low resolution)을 갖도록 합니다</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">mu_law</span>(<span class="params">x, mu=<span class="number">255</span></span>):</span><br><span class="line">    <span class="keyword">return</span> np.sign(x) * np.log(<span class="number">1</span> + mu * np.<span class="built_in">abs</span>(x)) / np.log(<span class="number">1</span> + mu)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x = np.linspace(-<span class="number">1</span>, <span class="number">1</span>, <span class="number">1000</span>)</span><br><span class="line">x_mu = mu_law(x)</span><br><span class="line"></span><br><span class="line">plt.figure(figsize=[<span class="number">6</span>, <span class="number">4</span>])</span><br><span class="line">plt.plot(x)</span><br><span class="line">plt.plot(x_mu)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%ED%95%98%EA%B8%B0-8/output_18_0.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wav_mulaw = mu_law(normed_wav)</span><br><span class="line">ipd.Audio(wav_mulaw, rate=sr)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>to be continued…<br>뒷장에서 계속됩니다.</p>
+</blockquote>
+</div><div class="article-licensing box"><div class="licensing-title"><p>딥러닝-입문하기-8</p><p><a href="http://example.com/2020/12/03/딥러닝-입문하기-8/">http://example.com/2020/12/03/딥러닝-입문하기-8/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>Xeoner</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2020-12-03</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2022-04-05</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/DL/">DL</a><a class="link-muted mr-2" rel="tag" href="/tags/Audio/">Audio</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/12/03/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%ED%95%98%EA%B8%B0-9/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">딥러닝-입문하기-9</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/11/30/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%847/"><span class="level-item">딥러닝-입문과-준비7</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card" id="comments"><div class="card-content"><h3 class="title is-5">Comments</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="MELoDy-sigmax"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">MELoDy-sigmax</p><p class="is-size-6 is-block">Musical Data blog</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Seoul</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives/"><p class="title">23</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories/"><p class="title">6</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags/"><p class="title">12</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="me noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">Catalogue</h3><ul class="menu-list"><ul class="menu-list"><li><a class="level is-mobile" href="#오디오-딥러닝-해보기"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">오디오 딥러닝 해보기</span></span></a></li><li><a class="level is-mobile" href="#Reference"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">Reference</span></span></a></li></ul><li><a class="level is-mobile" href="#1-Digital-Signal-Processing"><span class="level-left"><span class="level-item">2</span><span class="level-item">1. Digital Signal Processing</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Sound"><span class="level-left"><span class="level-item">2.1</span><span class="level-item">Sound?</span></span></a></li><li><a class="level is-mobile" href="#Sampling"><span class="level-left"><span class="level-item">2.2</span><span class="level-item">Sampling</span></span></a></li><li><a class="level is-mobile" href="#1-1-Time-domain"><span class="level-left"><span class="level-item">2.3</span><span class="level-item">1.1. Time domain</span></span></a></li><li><a class="level is-mobile" href="#Resampling"><span class="level-left"><span class="level-item">2.4</span><span class="level-item">Resampling</span></span></a></li><li><a class="level is-mobile" href="#Nomalization-Quantization"><span class="level-left"><span class="level-item">2.5</span><span class="level-item">Nomalization &amp; Quantization</span></span></a></li><li><a class="level is-mobile" href="#mu-law-encoding"><span class="level-left"><span class="level-item">2.6</span><span class="level-item">mu-law encoding</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Competition/"><span class="level-start"><span class="level-item">Competition</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Game/"><span class="level-start"><span class="level-item">Game</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Study/"><span class="level-start"><span class="level-item">Study</span></span><span class="level-end"><span class="level-item tag">18</span></span></a><ul><li><a class="level is-mobile" href="/categories/Study/Dacon/"><span class="level-start"><span class="level-item">Dacon</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Study/Game/"><span class="level-start"><span class="level-item">Game</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Study/Kaggle-Dacon/"><span class="level-start"><span class="level-item">Kaggle, Dacon</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-10-06T01:36:26.000Z">2023-10-06</time></p><p class="title"><a href="/2023/10/06/music2motion-project/">music2motion_project</a></p><p class="categories"><a href="/categories/Study/">Study</a> / <a href="/categories/Study/Game/">Game</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-03-15T23:28:46.000Z">2023-03-16</time></p><p class="title"><a href="/2023/03/16/%EA%B2%8C%EC%9E%84%EA%B0%9C%EB%B0%9C-%EC%9D%BC%EA%B8%B02/">게임개발-일기2</a></p><p class="categories"><a href="/categories/Game/">Game</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-10-16T09:23:41.000Z">2022-10-16</time></p><p class="title"><a href="/2022/10/16/rl-video-summ/">rl-video-summ</a></p><p class="categories"><a href="/categories/Study/">Study</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-05T07:26:50.000Z">2022-04-05</time></p><p class="title"><a href="/2022/04/05/hello-world/">Hello World</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-05T07:26:50.000Z">2022-04-05</time></p><p class="title"><a href="/2022/04/05/bbackcheem/">bbackcheem</a></p></div></article></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/10/"><span class="level-start"><span class="level-item">October 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/03/"><span class="level-start"><span class="level-item">March 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/10/"><span class="level-start"><span class="level-item">October 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/04/"><span class="level-start"><span class="level-item">April 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/09/"><span class="level-start"><span class="level-item">September 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/07/"><span class="level-start"><span class="level-item">July 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/06/"><span class="level-start"><span class="level-item">June 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/01/"><span class="level-start"><span class="level-item">January 2021</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/12/"><span class="level-start"><span class="level-item">December 2020</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/11/"><span class="level-start"><span class="level-item">November 2020</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Audio/"><span class="tag">Audio</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DL/"><span class="tag">DL</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Dacon/"><span class="tag">Dacon</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Dev/"><span class="tag">Dev</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GAN/"><span class="tag">GAN</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linear-Algebra/"><span class="tag">Linear Algebra</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ML/"><span class="tag">ML</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Try/"><span class="tag">Try</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Unity/"><span class="tag">Unity</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/XR/"><span class="tag">XR</span><span class="tag">2</span></a></div></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Xeoner&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2024 Xeoner</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2024</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><script type="text/javascript" id="MathJax-script" async>MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>

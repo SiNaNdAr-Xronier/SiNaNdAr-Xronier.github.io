@@ -1,0 +1,794 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Xeoner&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Xeoner&#039;s Blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Xeoner&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="some description"><meta property="og:type" content="blog"><meta property="og:title" content="Xeoner&#039;s Blog"><meta property="og:url" content="http://example.com/"><meta property="og:site_name" content="Xeoner&#039;s Blog"><meta property="og:description" content="some description"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://example.com/img/og_image.png"><meta property="article:author" content="Xeoner"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://example.com/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com"},"headline":"Xeoner's Blog","image":["http://example.com/img/og_image.png"],"author":{"@type":"Person","name":"Xeoner"},"publisher":{"@type":"Organization","name":"Xeoner's Blog","logo":{"@type":"ImageObject","url":"http://example.com/img/logo.svg"}},"description":"some description"}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;600&amp;family=Roboto+Mono"><link data-pjax rel="stylesheet" href="/css/cyberpunk.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-M6KHR911M6" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-M6KHR911M6');</script><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Xeoner&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-01-02T12:56:29.000Z" title="2021. 1. 2. 오후 9:56:29">2021-01-02</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-07-24T11:09:12.206Z" title="2022. 7. 24. 오후 8:09:12">2022-07-24</time></span><span class="level-item"><a class="link-muted" href="/categories/Study/">Study</a><span> / </span><a class="link-muted" href="/categories/Study/Kaggle-Dacon/">Kaggle, Dacon</a></span><span class="level-item">4 minutes read (About 612 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/01/02/Dacon%ED%9B%84%EA%B8%B0_2/">치열한-데이콘후기</a></p><div class="content"><h2 id="데이콘-최근-대회-후기-데이콘-어나더-버전"><a href="#데이콘-최근-대회-후기-데이콘-어나더-버전" class="headerlink" title="데이콘 최근 대회 후기 - 데이콘 어나더 버전"></a>데이콘 최근 대회 후기 - 데이콘 어나더 버전</h2><p>  흥미롭지만 quantile loss… 복잡하지만 풀이법은 있다.<br>  그냥 quantile 별로 돌리지 말고 1.0에 대한 값을 예측한 뒤 0.5 ~ 1.0 범위로 하면 끝;;<br>  <del>loss function 수식구현은 쉽지만 loss를 줄이는 방법이 관건이다.</del><br>  <del>진짜 4.1에서 줄어들지 않는 loss… 과연 어떻게 하면 줄일수 있을까…</del></p>
+<h3 id="다변량-회귀-왜-이렇게-어려울까요-데이콘-대회에서-얻은-엄청난-교훈"><a href="#다변량-회귀-왜-이렇게-어려울까요-데이콘-대회에서-얻은-엄청난-교훈" class="headerlink" title="다변량 회귀 왜 이렇게 어려울까요? - 데이콘 대회에서 얻은 엄청난 교훈"></a>다변량 회귀 왜 이렇게 어려울까요? - 데이콘 대회에서 얻은 엄청난 교훈</h3><p>  <del>loss 계산할때 다른 target 값과 x_train값이 아닌</del></p>
+<p>  <del>다른 Element 끼리 계산되어서 오히려 loss가 폭증하기도 한다 이렇게 하면 8:45 된다.</del></p>
+<p>  Wandb로 시각화 안했으면 큰일났었을듯 싶었다. </p>
+<p>  Loss 시각화 툴로 보니 초반에서 수렴하지 않는 문제나 아예 u자로 불규칙적으로 튀는 현상도 발생….</p>
+<p>  <img src="/%EC%B9%98%EC%97%B4%ED%95%9C-%EB%8D%B0%EC%9D%B4%EC%BD%98%ED%9B%84%EA%B8%B0/%EC%8B%A0%EA%B8%B0%ED%95%9C%EA%B7%B8%EB%9E%98%ED%94%84.PNG" alt="loss가 줄어드는 것처럼 보이지만 실제는 ..."></p>
+<p>  <del>분명 window dataset으로 부하분산을 하면 데이터 처리가 수월할 것 같지만…이렇게 되면 끗;;;</del></p>
+<p>  <del>채점을 해보니 극악의 Loss가 나오기도 한다. 에측 label과 train test의 shape을 확인 또 확인..</del></p>
+<p>  떄에는 window_size, buffer size를 잘 조절해야 한다.</p>
+<p>  window_size를 너무 낮추면 자칫하면 GPU 사용률은 한자리에 머물고 시간은 오래 걸린다. </p>
+<p>  하지만 GPU RAM 사용량은 줄어드는 이점은 있다.</p>
+<p>  window dataset을 하다보면 배치 크기가 안 맞아서 예측이 안될때가 있는데 이럴땐…<br>  <img src="/%EC%B9%98%EC%97%B4%ED%95%9C-%EB%8D%B0%EC%9D%B4%EC%BD%98%ED%9B%84%EA%B8%B0/%ED%9D%90%EC%9D%B5.PNG" alt="배치 크기가 안맞을 떄는 이렇게 padding을 쓴다."></p>
+<p>  Shuffle Buffer size 조절은 필수, batch Size에 주의하여 조절한다.<br>  그렇지 않으면(BATCH SIZE가 굉장히 높다면)<br>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">WARNING:tensorflow:5 out of the last 5 calls to &lt;function Model.make_predict_function.&lt;locals&gt;.predict_function at 0x7f2570221d30&gt; triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details. </span><br></pre></td></tr></table></figure></p>
+<p>  이런 경고가 나온다.. -&gt; batch size를 반드시 조절하거나 batch padding…</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2020-12-08T15:16:14.000Z" title="2020. 12. 9. 오전 12:16:14">2020-12-09</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-10-16T02:55:46.835Z" title="2022. 10. 16. 오전 11:55:46">2022-10-16</time></span><span class="level-item"><a class="link-muted" href="/categories/Competition/">Competition</a></span><span class="level-item">2 minutes read (About 249 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/12/09/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5-%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C-%ED%9B%84%EA%B8%B0/">인공지능 경진대회 후기</a></p><div class="content"><h2 id="인공지능-문제해결-경진대회-참가후기-2020-2021-🔔"><a href="#인공지능-문제해결-경진대회-참가후기-2020-2021-🔔" class="headerlink" title="인공지능 문제해결 경진대회 참가후기 2020, 2021 🔔"></a>인공지능 문제해결 경진대회 참가후기 2020, 2021 🔔</h2><p>  정말 치열했던 경진대회였다. </p>
+<p>  처음에는 이미지 멀티라벨 다중 분류 문제가 나왔었고  </p>
+<p>  그 이후 본선대회에서는 NLP, OCR, GAN 등 여러 도메인 문제가 출현했었다  </p>
+<p>  베이스라인 코드 그런건 사실상 없ㅋ음ㅋ..🔐</p>
+<p>  그냥 데이터를 말 그대로 해체 분석을 했어야 했다.</p>
+<p>  아무리 Data Clensing을 해도 그대로인 loss와 score… 8:45🕛</p>
+<p>  결국 아예 리모델링, 데이터 Cleanize 한 뒤에 학습을 다시 돌렸다.</p>
+<p>  천신만고 끝에…</p>
+<p>  <img src="/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5-%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C-%ED%9B%84%EA%B8%B0/2222.PNG" alt="최종순위...ㄷㄷㄷ"></p>
+<p>  <img src="/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5-%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C-%ED%9B%84%EA%B8%B0/3333.PNG" alt="최종순위 ㅎㄷㄷ"></p>
+<p>  <img src="/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5-%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C-%ED%9B%84%EA%B8%B0/4444.PNG" alt="최종순위 ㄷㄷㄷ;;"><br>    참고로 팀명은 <del>풍선띄우기</del> ;;</p>
+<p>  명단에 발표되기까지 엄청난 긴장감이…🌡📈</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2020-12-06T12:48:20.000Z" title="2020. 12. 6. 오후 9:48:20">2020-12-06</time></span><span class="level-item">Updated&nbsp;<time dateTime="2023-09-30T11:38:41.215Z" title="2023. 9. 30. 오후 8:38:41">2023-09-30</time></span><span class="level-item"><a class="link-muted" href="/categories/Study/">Study</a><span> / </span><a class="link-muted" href="/categories/Study/Kaggle-Dacon/">Kaggle, Dacon</a></span><span class="level-item">2 minutes read (About 332 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/12/06/Dacon%EB%8F%84%EC%A0%84%EA%B8%B0/">Dacon도전기</a></p><div class="content"><h2 id="데이콘-도전-후기"><a href="#데이콘-도전-후기" class="headerlink" title="데이콘 도전 후기"></a>데이콘 도전 후기</h2><p>  흥미롭지만 쉽지는 않다.<br>  말 그대로 새로운 파생변수, 모델을 많이 만들면 점수가 오르긴 한다.</p>
+<p>  <a target="_blank" rel="noopener" href="https://dacon.io/competitions/open/235597/leaderboard/">데이콘_연습문제</a></p>
+<p>  연습용이긴 한데 BERT모델 폭격으로 <del>양민학살</del> 이 벌써부터 시작되었…ㅎㄷㄷ</p>
+<p>  버트모델 안쓰고도 순위 올릴수는 있다. </p>
+<p>  지금부터 그 방법을 소개합니다.</p>
+<h3 id="데이콘-순위를-올릴수-있는-방법-창의적인-modeling-K-cross-Validation-parameter-searching"><a href="#데이콘-순위를-올릴수-있는-방법-창의적인-modeling-K-cross-Validation-parameter-searching" class="headerlink" title="데이콘 순위를 올릴수 있는 방법 - 창의적인 modeling, K-cross Validation, parameter searching"></a>데이콘 순위를 올릴수 있는 방법 - 창의적인 modeling, K-cross Validation, parameter searching</h3><p>  <img src="/Dacon%EB%8F%84%EC%A0%84%EA%B8%B0/vdcnn_1.PNG" alt="이것이 바로 VDCNN">  </p>
+<p>  VDCNN은 GPU가 잘 버텨주면<br>  0.86까지는 마구마구 올릴수 있음.  </p>
+<p>  이것이 바로 VDCNN이당!<br>  <a target="_blank" rel="noopener" href="https://github.com/melody-sigma/VDCNN_kor"><img src="/Dacon%EB%8F%84%EC%A0%84%EA%B8%B0/vdcnn_5.PNG" alt="VDCNN code"></a></p>
+<p>  <img src="/Dacon%EB%8F%84%EC%A0%84%EA%B8%B0/vdcnn_9.PNG" alt="VDCNN 학습장면"></p>
+<p>  학습 모델을 그림으로 보기</p>
+<p>  <img src="/Dacon%EB%8F%84%EC%A0%84%EA%B8%B0/output_36_0.png" alt="VDCNN 그림1"></p>
+<p>  <img src="/Dacon%EB%8F%84%EC%A0%84%EA%B8%B0/Dacon01.PNG" alt="데이콘 결과"><br>  여기에 여러 가지 모델 Ensemble 해보면 0.88은 가능해보일 것 같네요.</p>
+<blockquote>
+<p>추가로 모델 Ensemble 을 시도<br>  <img src="/Dacon%EB%8F%84%EC%A0%84%EA%B8%B0/output_43_0.png" alt="추가했던 모델1"><br>  <img src="/Dacon%EB%8F%84%EC%A0%84%EA%B8%B0/output_50_0.png" alt="추가했던 모델2"><br>  <img src="/Dacon%EB%8F%84%EC%A0%84%EA%B8%B0/output_57_0.png" alt="추가했던 모델3"></p>
+</blockquote>
+<blockquote>
+<p>추가적으로 트랜스포머 모델링..(2020-12-09 추가…)<br>  <a target="_blank" rel="noopener" href="https://github.com/NullSKool/VDCNN_kor/blob/master/TF2_kor_2.0.ipynb">Transformer</a></p>
+</blockquote>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2020-12-03T09:41:05.000Z" title="2020. 12. 3. 오후 6:41:05">2020-12-03</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-04-05T06:19:16.835Z" title="2022. 4. 5. 오후 3:19:16">2022-04-05</time></span><span class="level-item"><a class="link-muted" href="/categories/Study/">Study</a></span><span class="level-item">31 minutes read (About 4650 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/12/03/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%ED%95%98%EA%B8%B0-9/">딥러닝-입문하기-9</a></p><div class="content"><h2 id="지난번에-이어서-오디오-딥러닝-2번째"><a href="#지난번에-이어서-오디오-딥러닝-2번째" class="headerlink" title="지난번에 이어서 오디오 딥러닝 2번째"></a>지난번에 이어서 오디오 딥러닝 2번째</h2><h2 id="2-Sound-Representation"><a href="#2-Sound-Representation" class="headerlink" title="2. Sound Representation"></a>2. Sound Representation</h2><p>위에서 Sampling된 discrete한 데이터를 이제 우리는 표현이 가능합니다. 그렇다면 어떤 요소를 기반으로 저희가 데이터를 표현해야할까요?, 첫번째는 시간의 흐름에 따라, 공기의 파동의 크기로 보는 Time-domain Representation 방법이 있습니다. 두번째는 시간에 따라서 frequency의 변화를 보는 Time-Frequency representation이 있습니다. </p>
+<h3 id="2-1-Time-domain-Waveform"><a href="#2-1-Time-domain-Waveform" class="headerlink" title="2.1. Time domain - Waveform"></a>2.1. Time domain - Waveform</h3><p>Waveform의 경우에는 오디오의 자연적이 표현입니다. 시간이 x축으로 그리고 amplitude가 y축으로 표현이 됩니다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> librosa.display</span><br><span class="line"></span><br><span class="line">fig = plt.figure(figsize = (<span class="number">14</span>,<span class="number">5</span>))</span><br><span class="line">librosa.display.waveplot(y[<span class="number">0</span>:<span class="number">10000</span>], sr=sr)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&lt;matplotlib.collections.PolyCollection at 0x7fa325708d50&gt;
+</code></pre>
+<p><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%ED%95%98%EA%B8%B0-9/output_21_1.png" alt="png"></p>
+<h3 id="정현파-Sinusoid"><a href="#정현파-Sinusoid" class="headerlink" title="정현파 (Sinusoid)"></a>정현파 (Sinusoid)</h3><p>모든 신호는 주파수(frequency)와 크기(magnitude), 위상(phase)이 다른 정현파(sinusolida signal)의 조합으로 나타낼 수 있다. 퓨리에 변환은 조합된 정현파의 합(하모니) 신호에서 그 신호를 구성하는 정현파들을 각각 분리해내는 방법입니다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sr = <span class="number">16000</span> <span class="comment"># sample rate</span></span><br><span class="line">T = <span class="number">2.0</span>    <span class="comment"># seconds</span></span><br><span class="line">t = np.linspace(<span class="number">0</span>, T, <span class="built_in">int</span>(T*sr), endpoint=<span class="literal">False</span>) <span class="comment"># time variable</span></span><br><span class="line">x = <span class="number">0.5</span>*np.sin(<span class="number">2</span>*np.pi*<span class="number">440</span>*t)                <span class="comment"># pure sine wave at 440 Hz</span></span><br><span class="line"><span class="comment"># y = 0.5*numpy.sin(2*numpy.pi*400*t)</span></span><br><span class="line"></span><br><span class="line">ipd.Audio(x, rate=sr) <span class="comment"># load a NumPy array</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">librosa.display.waveplot(x[:<span class="number">50</span>], sr=sr)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&lt;matplotlib.collections.PolyCollection at 0x7fa327a01550&gt;
+</code></pre>
+<p><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%ED%95%98%EA%B8%B0-9/output_24_1.png" alt="png"></p>
+<h3 id="푸리에-변환-Fourier-transform"><a href="#푸리에-변환-Fourier-transform" class="headerlink" title="푸리에 변환 (Fourier transform)"></a>푸리에 변환 (Fourier transform)</h3><p>푸리에 변환(Fourier transform)을 직관적으로 설명하면 푸리에 변환은 임의의 입력 신호를 다양한 주파수를 갖는 주기함수(복수 지수함수)들의 합으로 분해하여 표현하는 것 입니다. 그리고 각 주기함수들의 진폭을 구하는 과정을 퓨리에 변환이라고 합니다.</p>
+<ul>
+<li>주기(period): 파동이 한번 진동하는데 걸리는 시간, 또는 그 길이, 일반적으로 sin함수의 주기는 \(2\pi &#x2F;w\)입니다</li>
+<li>주파수(frequency): 1초동안의 진동횟수입니다.</li>
+</ul>
+<p>퓨리에 변환의 식을 살펴봅시다.</p>
+<p>$$y(t)&#x3D;\sum_{k&#x3D;-\infty}^\infty A_k , \exp \left( i\cdot 2\pi\frac{k}{T} t \right)$$</p>
+<p>이 식을 하나식 해석해봅시다.<br>\(k\)는 \(-\infty\) ~ \(\infty\)의 범위를 가지고 움직입니다.<br>이것은 주기함수들의 갯수입니다. 어떠한 신호가 다른 주기함수들의 합으로 표현되는데, 그 주기함수는 무한대의 범위에 있군요.</p>
+<p>그렇다면 \(A_k\)은 그 사인함수의 진폭이라고 합니다. 이 식은 시간에 대한 입력신호 \(y_{t}\)가  \(\exp \left( i\cdot 2\pi\frac{k}{T} t \right)\) 와 진폭(\(A_k\))의 선형결합으로 표현됨을 말하고 있군요.</p>
+<p>위 그림을 본다면 조금 더 명확히 알수 있을 것 같습니다. 붉은색 라인이 입력신호 \(y_{t}\) 입니다. 일반적으로 우리가 다루게 되는 데이터인 음악이나 목소리 같은 데이터 역시 complex tone입니다. 여려개의 주파수영역이 합쳐진 것이죠. 이러한 여러개의 주파수 영역을 분리하자!가 주요한 아이디어입니다. 파란색 주기함수들을 보신다면 여러개의 주기함수들을 찾으실 수 있습니다. 그 주기함수들은 고유의 주파수(frequency)와 강도(amplitude)를 가지고 있고 그것이 파란색의 라인들로 표현되어 있습니다.</p>
+<p>진폭에 대한 수식은 다음과 같습니다.<br>$$A_k &#x3D; \frac{1}{T} \int_{-\frac{T}{2}}^\frac{T}{2} f(t) , \exp \left( -i\cdot 2\pi \frac{k}{T} t \right) , dt$$<br>여기서 하나의 의문점이 드실것 같습니다. 주기함수의 합으로 표현된다고 했는데 저희가 보고 있는것은 \(\exp \left( i\cdot 2\pi\frac{k}{T} t \right)\) 지수함수의 형태이기 때문입니다.</p>
+<p>지수함수와 주기함수 사이의 연관관계는 무엇일까요? 그 관계를 찾은 것이 바로 오일러 공식입니다.</p>
+<p>$$e^{i\theta} &#x3D; \cos{\theta} + i\sin{\theta}$$</p>
+<p>이 식을 위 식처럼 표현한다면 다음과 같습니다<br>$$\exp \left( i\cdot 2\pi\frac{k}{T} t \right) &#x3D; \cos\left({2\pi\frac{k}{T}}\right) + i\sin\left({2\pi\frac{k}{T}}\right)$$</p>
+<p>여기서 \(\cos{2\pi\frac{k}{T}}\), \(i\sin{2\pi\frac{k}{T}}\) 함수는 주기와 주파수를 가지는 주기함수입니다. </p>
+<p>즉 퓨리에 변환은 입력 singal이 어떤것인지 상관없이 sin, cos과 같은 주기함수들의 합으로 항상 분해 가능하다는 것입니다. </p>
+<h3 id="Fourier-Transform의-Orthogonal"><a href="#Fourier-Transform의-Orthogonal" class="headerlink" title="Fourier Transform의 Orthogonal"></a>Fourier Transform의 Orthogonal</h3><p>$$y(t)&#x3D;\sum_{k&#x3D;-\infty}^\infty A_k , \exp \left( i\cdot 2\pi\frac{k}{T} t \right)$$</p>
+<p>어떠한 주기함수를 우리는 cos과 sin함수로 표현하게 되었습니다. 여기서 한가지 재밌는 점은, 이 함수들이 직교하는 함수(orthogonal)라는 점이다.<br>$${ \exp \left(i\cdot 2\pi\frac{k}{T} t\right) } &#x3D; orthogonal$$</p>
+<p>벡터의 직교는 해당 벡터를 통해 평면의 모든 좌표를 표현할수 있었다. 함수의 내적은 적분으로 표현할 수 있는데, 만약 구간 [a,b]에서 직교하는 함수는 구간 [a,b]의 모든 함수를 표현할수 있습니다.</p>
+<p>위 케이스에서는 cos, sin 함수가 사실상 우리 입력신호에 대해서 기저가 되어주는 함수라고 생각할 수 있습니다.</p>
+<h3 id="DFT-Discrete-Fourier-Transform"><a href="#DFT-Discrete-Fourier-Transform" class="headerlink" title="DFT (Discrete Fourier Transform)"></a>DFT (Discrete Fourier Transform)</h3><p>한가지 의문점이 듭니다. 바로, 우리가 sampling으로 들어온 데이터는 바로 시간의 간격에 따른 소리의 amplitude의 discrete한 데이터이기 때문이다. 그렇다면 위 푸리에 변환 식을 Discrete한 영역으로 생각해봅시다.</p>
+<p>만약에 우리가 수집한 데이터 \(y_{n}\)에서, 이산 시계열 데이터가 주기 \(N\)으로 반복한다고 할때, DFT는 주파수와 진폭이 다른 \(N\)개의 사인 함수의 합으로 표현이 가능합니다.<br>$$y_n &#x3D; \frac{1}{N} \sum_{k&#x3D;0}^{N-1} Y_k \cdot \exp \left( i\cdot 2\pi\frac{k}{N} n \right)$$</p>
+<p>위 식을 보면 k의 range가 0부터 \(N-1\)로 변화했음을 알 수 있다. 이때 Spectrum \(Y_{k}\)를 원래의 시계열 데이터에 대한 퓨리에 변환값이라고 하죠.</p>
+<p>$$Y_k &#x3D; \sum_{n&#x3D;0}^{N-1} y_n\cdot \exp \left( -i\cdot 2\pi\frac{k}{N} n \right)$$</p>
+<ul>
+<li>\(y_{n}\) : input signal</li>
+<li>\(n\) : Discrete time index</li>
+<li>\(k\) : discrete frequency index</li>
+<li>\(Y_{k}\) : k번째 frequeny에 대한 Spectrum의 값</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">DFT</span>(<span class="params">x</span>):</span><br><span class="line">    N = <span class="built_in">len</span>(x)</span><br><span class="line">    X = np.array([])</span><br><span class="line">    nv = np.arange(N)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(N):</span><br><span class="line">        s = np.exp(<span class="number">1j</span>*<span class="number">2</span>*np.pi*k/N*nv)</span><br><span class="line">        X = np.append(X, <span class="built_in">sum</span>(x*np.conjugate(s)))</span><br><span class="line">    <span class="keyword">return</span> X</span><br></pre></td></tr></table></figure>
+
+<h3 id="STFT-Short-Time-Fourier-Transform"><a href="#STFT-Short-Time-Fourier-Transform" class="headerlink" title="STFT (Short-Time Fourier Transform)"></a>STFT (Short-Time Fourier Transform)</h3><p>FFT는 시간에 흐름에 따라 신호의 수파수가 변했을때, 어느 시간대에 주파수가 변하는지 모르게 됩니다. 이러한 한계를 극복하기 위해서, STFT는 시간의 길이를 나눠서 이제 퓨리에 변환을 하게 됩니다. 즉 FFT를 했을때는 Time domina에 대한 정보가 날아가게 되는 것이죠.</p>
+<p>주파수의 특성이 시간에 따라 달라지는 사운드를 분석하는 방법입니다. 일반적으로 우리가 사용하는 signal 데이터에 적합하다. 시계열 데이터를 일정한 시간 구간 (window size)로 나누고, 각 구간에 대해서 스펙트럼을 구하는 데이터이다. 이는 Time-frequency 2차원 데이터로 표현이 됩니다.</p>
+<p>$$X(l,k) &#x3D; \sum_{n&#x3D;0}^{N-1} w(n) x(n+lH)\exp^{\frac{-2\pi k n}{N}}$$</p>
+<ul>
+<li><p>\(N\) : FFT size</p>
+<ul>
+<li>Window를 얼마나 많은 주파수 밴드로 나누는가 입니다.</li>
+</ul>
+</li>
+<li><p>Duration</p>
+<ul>
+<li>샘플링 레이트를 window로 나눈 값입니다.</li>
+<li>$$T&#x3D; window&#x2F;SR$$</li>
+<li>T(Window) &#x3D; 5T(Signal), duration은 신호주기보다 5배 이상 길게 잡아야한다.</li>
+<li>440Hz 신호의 window size는 5*(1&#x2F;440)이 됩니다.</li>
+</ul>
+</li>
+<li><p>\(w(n)\) : Window function</p>
+<ul>
+<li>일반적으로 Hann window가 쓰입니다.</li>
+</ul>
+</li>
+<li><p>\(n\) : Window size</p>
+<ul>
+<li>Window 함수에 들어가는 Sample의 양입니다.</li>
+<li>작을수록 Low-frequency resolution을 가지게 되고, high-time resolution을 가집니다.</li>
+<li>길수록 High-frequency, low time resolution을 가집니다.</li>
+</ul>
+</li>
+<li><p>\(H\) : Hop size</p>
+<ul>
+<li>윈도우가 겹치는 사이즈입니다. 일반적으로는 1&#x2F;4정도를 겹치게 합니다.</li>
+</ul>
+</li>
+</ul>
+<p>STFT의 결과는 즉 시간의 흐름(Window)에 따른 Frequency영역별 Amplitude를 반환합니다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sr = <span class="number">16000</span> <span class="comment"># sample rate</span></span><br><span class="line">T = <span class="number">2.0</span>    <span class="comment"># seconds</span></span><br><span class="line">t = np.linspace(<span class="number">0</span>, T, <span class="built_in">int</span>(T * sr), endpoint=<span class="literal">False</span>) <span class="comment"># time variable</span></span><br><span class="line">x = <span class="number">0.5</span> * np.sin(<span class="number">2</span> * np.pi * <span class="number">440</span> * t)                <span class="comment"># pure sine wave at 440 Hz</span></span><br><span class="line"><span class="comment"># y = 0.5*numpy.sin(2*numpy.pi*400*t)</span></span><br><span class="line"></span><br><span class="line">ipd.Audio(x, rate=sr) <span class="comment"># load a NumPy array</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(y))</span><br><span class="line">D = librosa.stft(y)</span><br><span class="line"><span class="built_in">print</span>(D.shape, D)</span><br><span class="line"></span><br><span class="line"><span class="comment"># phase 에 대한 정보를 날린다.</span></span><br><span class="line">D_mag = np.<span class="built_in">abs</span>(D)</span><br><span class="line"><span class="built_in">print</span>(D_mag)</span><br><span class="line"><span class="built_in">print</span>(D_mag.shape)</span><br><span class="line"></span><br><span class="line">magnitude, phase = librosa.magphase(D)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(magnitude)</span><br><span class="line"><span class="built_in">print</span>(magnitude.shape)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(magnitude-D_mag)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<pre><code>48944
+(1025, 96) [[-2.1494275e-01+0.0000000e+00j -2.0992082e-01+0.0000000e+00j
+  -2.0418610e-01+0.0000000e+00j ... -1.9438802e-01+0.0000000e+00j
+  -1.9518623e-01+0.0000000e+00j -2.3163199e-01+0.0000000e+00j]
+ [ 9.3493842e-02+6.7762636e-21j  1.2481287e-01+4.8880498e-03j
+   7.3961377e-02+1.3274251e-03j ...  7.7925511e-02-1.7781712e-02j
+   9.6285135e-02+1.7115690e-02j  1.1564651e-01-5.2810002e-02j]
+ [ 1.9829417e-02+8.2818238e-19j -3.1706840e-02+1.5587136e-02j
+   5.7078212e-02-2.0519590e-02j ...  2.3265863e-02+7.6752454e-02j
+   3.0044108e-03-6.0352467e-02j  5.4616658e-03+6.8522707e-02j]
+ ...
+ [-5.3125373e-03-1.2618632e-18j  3.4157380e-03-1.7295172e-03j
+  -1.8859134e-03-3.5993013e-04j ... -7.6227036e-04-9.3025468e-05j
+  -1.8814437e-04-8.4138475e-05j  4.7763987e-04-5.3400453e-04j]
+ [ 2.1248308e-03+1.5585406e-19j -1.4035926e-03+8.0862024e-05j
+   2.4144542e-03+3.4830419e-04j ... -2.3595782e-04+1.1687888e-03j
+   1.1331354e-04+1.2911476e-04j  2.8909228e-04+3.3650018e-04j]
+ [-8.1756472e-04+0.0000000e+00j -9.3529455e-04+0.0000000e+00j
+  -1.4104146e-03+0.0000000e+00j ...  1.3452002e-03+0.0000000e+00j
+  -9.2299597e-06+0.0000000e+00j -4.9439305e-04+0.0000000e+00j]]
+[[2.1494275e-01 2.0992082e-01 2.0418610e-01 ... 1.9438802e-01
+  1.9518623e-01 2.3163199e-01]
+ [9.3493842e-02 1.2490856e-01 7.3973291e-02 ... 7.9928555e-02
+  9.7794548e-02 1.2713383e-01]
+ [1.9829417e-02 3.5331041e-02 6.0654562e-02 ... 8.0201246e-02
+  6.0427204e-02 6.8740025e-02]
+ ...
+ [5.3125373e-03 3.8286415e-03 1.9199529e-03 ... 7.6792570e-04
+  2.0610093e-04 7.1645004e-04]
+ [2.1248308e-03 1.4059199e-03 2.4394479e-03 ... 1.1923688e-03
+  1.7178644e-04 4.4362905e-04]
+ [8.1756472e-04 9.3529455e-04 1.4104146e-03 ... 1.3452002e-03
+  9.2299597e-06 4.9439305e-04]]
+(1025, 96)
+[[2.1494275e-01 2.0992082e-01 2.0418610e-01 ... 1.9438802e-01
+  1.9518623e-01 2.3163199e-01]
+ [9.3493842e-02 1.2490856e-01 7.3973291e-02 ... 7.9928555e-02
+  9.7794548e-02 1.2713383e-01]
+ [1.9829417e-02 3.5331041e-02 6.0654562e-02 ... 8.0201246e-02
+  6.0427204e-02 6.8740025e-02]
+ ...
+ [5.3125373e-03 3.8286415e-03 1.9199529e-03 ... 7.6792570e-04
+  2.0610093e-04 7.1645004e-04]
+ [2.1248308e-03 1.4059199e-03 2.4394479e-03 ... 1.1923688e-03
+  1.7178644e-04 4.4362905e-04]
+ [8.1756472e-04 9.3529455e-04 1.4104146e-03 ... 1.3452002e-03
+  9.2299597e-06 4.9439305e-04]]
+(1025, 96)
+[[0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 0. 0. 0.]]
+</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">S = librosa.core.stft(audio_np, n_fft=<span class="number">1024</span>, hop_length=<span class="number">512</span>, win_length=<span class="number">1024</span>)</span><br><span class="line">D = np.<span class="built_in">abs</span>(S)**<span class="number">2</span></span><br><span class="line">log_S = librosa.power_to_db(S, ref=np.<span class="built_in">max</span>) <span class="comment">#소리의 단위를 db로 바꿈 </span></span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(<span class="number">12</span>,<span class="number">4</span>))</span><br><span class="line">librosa.display.specshow(log_S, sr=<span class="number">16000</span>, x_axis=<span class="string">&#x27;time&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="Window-function"><a href="#Window-function" class="headerlink" title="Window function?"></a>Window function?</h3><p>위에서 Window function과 Window size라는 이야기가 나오고 있습니다. 윈도우 Function과 Size는 왜 쓰는 것이며 어떨때 쓰는 것일까요?</p>
+<p>Window function의 주된 기능은 main-lobe의 width와 side-lobe의 레벨의 Trade-off 를 제어해 준다는 장점이 있습니다. 그리고 깁스 현상을 막아주는 고마운 친구이기도 하죠. 지금나온 main-lobe, side-bloe, 깁스현상은 무엇일까요?</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">frame_audio</span>(<span class="params">audio, FFT_size=<span class="number">1024</span>, hop_size=<span class="number">20</span>, sample_rate = <span class="number">22050</span></span>):</span><br><span class="line">    audio = np.pad(audio, <span class="built_in">int</span>(FFT_size/<span class="number">2</span>), mode=<span class="string">&#x27;reflect&#x27;</span>)</span><br><span class="line">    frame_len = np.<span class="built_in">round</span>(sample_rate*hop_size / <span class="number">1000</span>).astype(<span class="built_in">int</span>)</span><br><span class="line">    frame_num = <span class="built_in">int</span>((<span class="built_in">len</span>(audio) - FFT_size) / frame_len) + <span class="number">1</span></span><br><span class="line">    frames = np.zeros((frame_num, FFT_size))</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(frame_num):</span><br><span class="line">        frames[n] = audio[n*frame_len:n*frame_len+FFT_size]</span><br><span class="line">    <span class="keyword">return</span> frames</span><br><span class="line"></span><br><span class="line">audio_framed = frame_audio(audio_np)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Framed audio shape: &#123;&#125;&quot;</span>.<span class="built_in">format</span>(audio_framed.shape))</span><br></pre></td></tr></table></figure>
+
+<pre><code>Framed audio shape: (469, 1024)
+</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> signal</span><br><span class="line"></span><br><span class="line">window = signal.get_window(<span class="string">&quot;hann&quot;</span>, <span class="number">1024</span>, fftbins=<span class="literal">True</span>)</span><br><span class="line">audio_win = audio_framed * window</span><br><span class="line">ind = <span class="number">2</span></span><br><span class="line">plt.figure(figsize=(<span class="number">15</span>,<span class="number">6</span>))</span><br><span class="line">plt.subplot(<span class="number">3</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">plt.plot(window)</span><br><span class="line">plt.grid(<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line">plt.plot(audio_framed[ind])</span><br><span class="line">plt.grid(<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">3</span>,<span class="number">1</span>,<span class="number">3</span>)</span><br><span class="line">plt.plot(audio_win[ind])</span><br><span class="line">plt.grid(<span class="literal">True</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%ED%95%98%EA%B8%B0-9/output_49_0.png" alt="png"></p>
+<p>플롯을 보게 된다면 windowing을 적용하기전 plot은 끝부분이 다 다르지만, windowing을 지나고 나서 나오는 plot은 끝이 0 으로 일치한다는 특성을 볼 수 있습니다.</p>
+<h3 id="Window-size"><a href="#Window-size" class="headerlink" title="Window size?"></a>Window size?</h3><p>윈도우 사이즈는 일반적으로 time과 frequency의 resolutions을 제어해 줍니다.</p>
+<ul>
+<li>short-window : 낮은 frequency resolution, 높은 time-resolution을 가지게 됩니다.</li>
+<li>Long-window : 높은 frequency resolution을 가지며, 낮은 time-resolution을 가지게 됩니다.</li>
+</ul>
+<h3 id="Spectrogram"><a href="#Spectrogram" class="headerlink" title="Spectrogram"></a>Spectrogram</h3><p>Spectrogram을 추출하는 방법을 고민해봅시다.일반적으로 프로세스는 입력신호에 대해서 window function을 통과하여 window size만큼 sampling 된 data를 받아서 Discrete Fourier Transform을 거치게 됩니다. DFT를 거친 신호들은 Frequency와 Amplitude의 영역을 가지는 Spectrum이 됩니다. 이후 이를 90도로 회전시켜서, time domain으로 stack하게 됩니다.</p>
+<p>Spectrogram은 Frequency Scale에 대해서 Scaling이 이루어집니다. 주파수 영역에 Scaling을 하는 이유는, 인간의 주파수를 인식하는 방식과 연관이 있습니다. </p>
+<p>일반적으로 사람은, 인접한 주파수를 크게 구별하지 못합니다. 그 이유는 우리의 인지기관이 categorical한 구분을 하기 때문입니다. 때문에 우리는 주파수들의 Bin의 그룹을 만들고 이들을 합하는 방식으로, 주파수 영역에서 얼마만큼의 에너지가 있는지를 찾아볼 것입니다. 일반적으로는 인간이 적은 주파수에 더 풍부한 정보를 사용하기때문에, 주파수가 올라갈수록 필터의 폭이 높아지면서 고주파는 거의 고려를 안하게 됩니다.</p>
+<p>따라서 아래 frequency scale은 어떤 방식을 통해 저주파수대 영역을 고려할 것이가에 대한 고민이 남아 있습니다.</p>
+<h3 id="Linear-frequency-scale"><a href="#Linear-frequency-scale" class="headerlink" title="Linear frequency scale"></a>Linear frequency scale</h3><p>일반적으로 single tone(순음)들의 배음 구조를 파악하기 좋습니다. 하지만 분포가 저주파수 영역에 기울어져(skewed) 있습니다.</p>
+<h3 id="Mel-Scale"><a href="#Mel-Scale" class="headerlink" title="Mel Scale"></a>Mel Scale</h3><p>멜 스펙트럼은 주파수 단위를 다음 공식에 따라 멜 단위로 바꾼 것을 의미합니다.</p>
+<p>$$m &#x3D; 2595 \log_{10}\left(1 + \frac{f}{700}\right)$$<br>일반적으로는 mel-scaled bin을 FFT size보다 조금더 작게 만드는게 일반적입니다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># STFT</span></span><br><span class="line">S = librosa.core.stft(audio_np, n_fft=<span class="number">1024</span>, hop_length=<span class="number">512</span>, win_length=<span class="number">1024</span>)</span><br><span class="line"><span class="comment"># phase 에 대한 정보를 날린다.</span></span><br><span class="line">D = np.<span class="built_in">abs</span>(S)**<span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># mel spectrogram (512 --&gt; 40)</span></span><br><span class="line">mel_basis = librosa.filters.mel(sr, <span class="number">1024</span>, n_mels=<span class="number">40</span>)</span><br><span class="line">mel_S = np.dot(mel_basis, D)</span><br><span class="line">mel_S.shape</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>(40, 404)
+</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> librosa.display</span><br><span class="line"></span><br><span class="line">S = librosa.feature.melspectrogram(audio_np, sr=sr, n_mels = <span class="number">128</span>)</span><br><span class="line">log_S = librosa.power_to_db(S, ref=np.<span class="built_in">max</span>)</span><br><span class="line">plt.figure(figsize=(<span class="number">12</span>,<span class="number">4</span>))</span><br><span class="line">librosa.display.specshow(log_S, sr=sr, x_axis=<span class="string">&#x27;time&#x27;</span>, y_axis=<span class="string">&#x27;mel&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Mel power sepctrogram&#x27;</span>)</span><br><span class="line">plt.colorbar(<span class="built_in">format</span>=<span class="string">&#x27;%+02.0f dB&#x27;</span>)</span><br><span class="line">plt.tight_layout()</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%ED%95%98%EA%B8%B0-9/output_54_0.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> librosa.display</span><br><span class="line"></span><br><span class="line">S = librosa.feature.melspectrogram(audio_np, sr=sr, n_mels = <span class="number">256</span>)</span><br><span class="line">log_S = librosa.power_to_db(S, ref=np.<span class="built_in">max</span>)</span><br><span class="line">plt.figure(figsize=(<span class="number">12</span>,<span class="number">4</span>))</span><br><span class="line">librosa.display.specshow(log_S, sr=sr, x_axis=<span class="string">&#x27;time&#x27;</span>, y_axis=<span class="string">&#x27;mel&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Mel power sepctrogram&#x27;</span>)</span><br><span class="line">plt.colorbar(<span class="built_in">format</span>=<span class="string">&#x27;%+02.0f dB&#x27;</span>)</span><br><span class="line">plt.tight_layout()</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%ED%95%98%EA%B8%B0-9/output_55_0.png" alt="png"></p>
+<h3 id="Bark-scale"><a href="#Bark-scale" class="headerlink" title="Bark scale"></a>Bark scale</h3><p>귀가 인식하는 주파수의 영역은 대략 20Hz~2000Hz 로 가정합니다. 하지만 주파수에 대한 사람의 인식은 비선형적입니다. 귀와 뇌의 가청대역을 24개의 대역으로 나눈것을 Bark라고 합니다! Bark scale은 500Hz이하에서는 100Hz의 대역폭을 가지며, 500Hz 이상에서는 각 대역의 중심수파수의 대략 20%에 해당하는 대역폭을 가지게 됩니다.</p>
+<p><code>20, 100, 200, 300, 400, 510, 630, 770, 920, 1080, 1270, 1480, 1720, 2000, 2320, 2700, 3150, 3700, 4400, 5300, 6400, 7700, 9500, 12000, 15500 ( Hz )</code></p>
+<h3 id="Log-compression"><a href="#Log-compression" class="headerlink" title="Log compression"></a>Log compression</h3><p>\(10 * log10(\frac{S}{ref})\)<br>의 단위로 신호를 스케일링 합니다. 이는 spectrogram을 데시벨 유닛으로 전환해 줍니다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#log compression</span></span><br><span class="line">log_mel_S = librosa.power_to_db(mel_S)</span><br><span class="line">log_mel_S.shape</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>(40, 404)
+</code></pre>
+<h3 id="Discrete-cosine-transform-DCT"><a href="#Discrete-cosine-transform-DCT" class="headerlink" title="Discrete cosine transform (DCT)"></a>Discrete cosine transform (DCT)</h3><p>DCT는 n개의 데이터를 n개의 코사인 함수의 합으로 표현하여 데이터의 양을 줄이는 방식입니다. </p>
+<ul>
+<li>저 주파수에 에너지가 집중되고 고 주파수 영역에 에너지가 감소합니다.</li>
+</ul>
+<p>Filter Bank는 모두 Overlapping 되어 있기 때문에 Filter Bank 에너지들 사이에 상관관계가 존재하기 때문이다. DCT는 에너지들 사이에 이러한 상관관계를 분리 해주는 역활을 해줍니다.</p>
+<p>하지만 여기서 26개 DCT Coefficient 들 중 12만 남겨야 하는데, 그 이유는 DCT Coefficient 가 많으면, Filter Bank 에너지의 빠른 변화를 나타내게 되고, 이것은 음성인식의 성능을 낮추게 됩니다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># mfcc (DCT)</span></span><br><span class="line">mfcc = librosa.feature.mfcc(S=log_mel_S, n_mfcc=<span class="number">13</span>)</span><br><span class="line">mfcc = mfcc.astype(np.float32)    <span class="comment"># to save the memory (64 to 32 bits)</span></span><br><span class="line">plt.figure(figsize=(<span class="number">12</span>,<span class="number">4</span>))</span><br><span class="line">librosa.display.specshow(mfcc)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f3a8975cc88&gt;
+</code></pre>
+<p><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%ED%95%98%EA%B8%B0-9/output_61_1.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">mfcc = librosa.feature.mfcc(S=log_S, n_mfcc=<span class="number">13</span>)</span><br><span class="line">delta2_mfcc = librosa.feature.delta(mfcc, order=<span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(delta2_mfcc.shape)</span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(<span class="number">12</span>,<span class="number">4</span>))</span><br><span class="line">librosa.display.specshow(delta2_mfcc)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;MFCC coeffs&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Time&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;MFCC&#x27;</span>)</span><br><span class="line">plt.colorbar()</span><br><span class="line">plt.tight_layout()</span><br></pre></td></tr></table></figure>
+
+<pre><code>(13, 148)
+</code></pre>
+<p><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%ED%95%98%EA%B8%B0-9/output_62_1.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">change_pitch</span>(<span class="params">data, sr</span>):</span><br><span class="line">    y_pitch = data.copy()</span><br><span class="line">    bins_per_octave = <span class="number">12</span></span><br><span class="line">    pitch_pm = <span class="number">2</span></span><br><span class="line">    pitch_change = pitch_pm * <span class="number">2</span> * (np.random.uniform())</span><br><span class="line">    y_pitch = librosa.effects.pitch_shift(y_pitch.astype(<span class="string">&#x27;float64&#x27;</span>), sr, n_steps=pitch_change,</span><br><span class="line">                                          bins_per_octave=bins_per_octave)</span><br><span class="line">    <span class="keyword">return</span> y_pitch</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">waveform_aug</span>(<span class="params">waveform,sr</span>):</span><br><span class="line">  y = change_pitch(waveform, sr)</span><br><span class="line">  fig = plt.figure(figsize = (<span class="number">14</span>,<span class="number">5</span>))</span><br><span class="line">  librosa.display.waveplot(y, sr=sr)</span><br><span class="line">  ipd.display(ipd.Audio(data=y, rate=sr))</span><br><span class="line">  <span class="keyword">return</span> y, sr</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ipd.display(ipd.Audio(data=audio_np, rate=sr))</span><br><span class="line">y, sr = waveform_aug(audio_np, <span class="number">16000</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%ED%95%98%EA%B8%B0-9/output_66_2.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">S = librosa.feature.melspectrogram(audio_np, sr=sr, n_mels = <span class="number">128</span>)</span><br><span class="line">log_S = librosa.power_to_db(S, ref=np.<span class="built_in">max</span>)</span><br><span class="line">plt.figure(figsize=(<span class="number">12</span>,<span class="number">4</span>))</span><br><span class="line">librosa.display.specshow(log_S, sr=sr, x_axis=<span class="string">&#x27;time&#x27;</span>, y_axis=<span class="string">&#x27;mel&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Mel power sepctrogram&#x27;</span>)</span><br><span class="line">plt.colorbar(<span class="built_in">format</span>=<span class="string">&#x27;%+02.0f dB&#x27;</span>)</span><br><span class="line">plt.tight_layout()</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%ED%95%98%EA%B8%B0-9/output_67_0.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.random.uniform(low=<span class="number">1.5</span>, high=<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>2.6892527992385458
+</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">value_aug</span>(<span class="params">data</span>):</span><br><span class="line">    y_aug = data.copy()</span><br><span class="line">    dyn_change = np.random.uniform(low=<span class="number">1.5</span>, high=<span class="number">3</span>)</span><br><span class="line">    y_aug = y_aug * dyn_change</span><br><span class="line">    <span class="keyword">return</span> y_aug</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">add_noise</span>(<span class="params">data</span>):</span><br><span class="line">    noise = np.random.randn(<span class="built_in">len</span>(data))</span><br><span class="line">    data_noise = data + <span class="number">0.005</span> * noise</span><br><span class="line">    <span class="keyword">return</span> data_noise</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">hpss</span>(<span class="params">data</span>):</span><br><span class="line">    y_harmonic, y_percussive = librosa.effects.hpss(data.astype(<span class="string">&#x27;float64&#x27;</span>))</span><br><span class="line">    <span class="keyword">return</span> y_harmonic, y_percussive</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">shift</span>(<span class="params">data</span>):</span><br><span class="line">    <span class="keyword">return</span> np.roll(data, <span class="number">1600</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">stretch</span>(<span class="params">data, rate=<span class="number">1</span></span>):</span><br><span class="line">    input_length = <span class="built_in">len</span>(data)</span><br><span class="line">    streching = librosa.effects.time_stretch(data, rate)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(streching) &gt; input_length:</span><br><span class="line">        streching = streching[:input_length]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        streching = np.pad(streching, (<span class="number">0</span>, <span class="built_in">max</span>(<span class="number">0</span>, input_length - <span class="built_in">len</span>(streching))), <span class="string">&quot;constant&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> streching</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">change_pitch_and_speed</span>(<span class="params">data</span>):</span><br><span class="line">    y_pitch_speed = data.copy()</span><br><span class="line">    <span class="comment"># you can change low and high here</span></span><br><span class="line">    length_change = np.random.uniform(low=<span class="number">0.8</span>, high=<span class="number">1</span>)</span><br><span class="line">    speed_fac = <span class="number">1.0</span> / length_change</span><br><span class="line">    tmp = np.interp(np.arange(<span class="number">0</span>, <span class="built_in">len</span>(y_pitch_speed), speed_fac), np.arange(<span class="number">0</span>, <span class="built_in">len</span>(y_pitch_speed)), y_pitch_speed)</span><br><span class="line">    minlen = <span class="built_in">min</span>(y_pitch_speed.shape[<span class="number">0</span>], tmp.shape[<span class="number">0</span>])</span><br><span class="line">    y_pitch_speed *= <span class="number">0</span></span><br><span class="line">    y_pitch_speed[<span class="number">0</span>:minlen] = tmp[<span class="number">0</span>:minlen]</span><br><span class="line">    <span class="keyword">return</span> y_pitch_speed</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">data_noise = add_noise(audio_np)</span><br><span class="line">data_roll = shift(audio_np)</span><br><span class="line">data_stretch = stretch(audio_np)</span><br><span class="line">pitch_speed = change_pitch_and_speed(audio_np)</span><br><span class="line">value = value_aug(audio_np)</span><br><span class="line">y_harmonic, y_percussive = hpss(audio_np)</span><br><span class="line">y_shift = shift(audio_np)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipd.Audio(data_noise, rate=fs)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">librosa.display.specshow(librosa.amplitude_to_db(magnitude,</span><br><span class="line">                                                  ref=np.<span class="built_in">max</span>),</span><br><span class="line">                          y_axis=<span class="string">&#x27;log&#x27;</span>, x_axis=<span class="string">&#x27;time&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Power spectrogram&#x27;</span>)</span><br><span class="line">plt.colorbar(<span class="built_in">format</span>=<span class="string">&#x27;%+2.0f dB&#x27;</span>)</span><br><span class="line">plt.tight_layout()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%ED%95%98%EA%B8%B0-9/output_32_1.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">mel_s = librosa.feature.melspectrogram(y=y, sr=sr)</span><br><span class="line"><span class="built_in">print</span>(mel_s.shape)</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">librosa.display.specshow(librosa.amplitude_to_db(mel_s,</span><br><span class="line">                                                  ref=np.<span class="built_in">max</span>),</span><br><span class="line">                          y_axis=<span class="string">&#x27;log&#x27;</span>, x_axis=<span class="string">&#x27;time&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Power spectrogram&#x27;</span>)</span><br><span class="line">plt.colorbar(<span class="built_in">format</span>=<span class="string">&#x27;%+2.0f dB&#x27;</span>)</span><br><span class="line">plt.tight_layout()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<pre><code>(128, 96)
+</code></pre>
+<p><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%ED%95%98%EA%B8%B0-9/output_33_1.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">mfccs = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=<span class="number">40</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(mfccs.shape)</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">plt.figure(figsize=(<span class="number">10</span>, <span class="number">4</span>))</span><br><span class="line">librosa.display.specshow(mfccs, x_axis=<span class="string">&#x27;time&#x27;</span>)</span><br><span class="line">plt.colorbar()</span><br><span class="line">plt.title(<span class="string">&#x27;MFCC&#x27;</span>)</span><br><span class="line">plt.tight_layout()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<pre><code>(40, 96)
+</code></pre>
+<p><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%ED%95%98%EA%B8%B0-9/output_34_1.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">librosa.display.specshow(librosa.amplitude_to_db(mfccs,</span><br><span class="line">                                                  ref=np.<span class="built_in">max</span>),</span><br><span class="line">                          y_axis=<span class="string">&#x27;log&#x27;</span>, x_axis=<span class="string">&#x27;time&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Power spectrogram&#x27;</span>)</span><br><span class="line">plt.colorbar(<span class="built_in">format</span>=<span class="string">&#x27;%+2.0f dB&#x27;</span>)</span><br><span class="line">plt.tight_layout()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%ED%95%98%EA%B8%B0-9/output_35_0.png" alt="png"></p>
+<h4 id="들리는-소리-배경잡음-목소리"><a href="#들리는-소리-배경잡음-목소리" class="headerlink" title="들리는 소리 &#x3D; 배경잡음 + 목소리"></a>들리는 소리 &#x3D; 배경잡음 + 목소리</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">filename_wav = <span class="string">&quot;./wav/voice.wav&quot;</span></span><br><span class="line">filename_noise = <span class="string">&quot;./wav/cafe_noise.wav&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> IPython.display <span class="keyword">as</span> ipd</span><br><span class="line">ipd.Audio(filename_wav)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> IPython.display <span class="keyword">as</span> ipd</span><br><span class="line">ipd.Audio(filename_noise)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">data_wav, sr_wav = librosa.load(filename_wav, mono=<span class="literal">True</span>, sr=<span class="number">16000</span>)</span><br><span class="line">data_noise, sr_noise = librosa.load(filename_noise, mono=<span class="literal">True</span>, sr=<span class="number">16000</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(data_wav.shape)</span><br><span class="line"><span class="built_in">print</span>(data_noise.shape)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 전체적으로 들리는 소리는 소리의 합( 배경음 + 목소리 )</span></span><br><span class="line">data_wav_noise = data_wav[:] + data_noise[:<span class="built_in">len</span>(data_wav)]</span><br><span class="line"></span><br><span class="line">pos=<span class="number">10</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;wav: &#123;:.8f&#125;, noise &#123;:.8f&#125;, wav+noise: &#123;:.8f&#125;&quot;</span>.<span class="built_in">format</span>(data_wav[pos], data_noise[pos], data_wav_noise[pos]))</span><br></pre></td></tr></table></figure>
+
+<pre><code>(48944,)
+(1044712,)
+wav: -0.00009155, noise -0.00003052, wav + noise: -0.00012207
+</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipd.Audio(data_wav_noise, rate=<span class="number">16000</span>)</span><br></pre></td></tr></table></figure>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2020-12-03T08:02:23.000Z" title="2020. 12. 3. 오후 5:02:23">2020-12-03</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-04-05T06:20:15.755Z" title="2022. 4. 5. 오후 3:20:15">2022-04-05</time></span><span class="level-item"><a class="link-muted" href="/categories/Study/">Study</a></span><span class="level-item">8 minutes read (About 1228 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/12/03/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%ED%95%98%EA%B8%B0-8/">딥러닝-입문하기-8</a></p><div class="content"><h3 id="오디오-딥러닝-해보기"><a href="#오디오-딥러닝-해보기" class="headerlink" title="오디오 딥러닝 해보기"></a>오디오 딥러닝 해보기</h3><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul>
+<li><p>Digital Signal Processing Lecture <a target="_blank" rel="noopener" href="https://github.com/spatialaudio/digital-signal-processing-lecture">https://github.com/spatialaudio/digital-signal-processing-lecture</a> </p>
+</li>
+<li><p>Python for Signal Processing (unipingco) <a target="_blank" rel="noopener" href="https://github.com/unpingco/Python-for-Signal-Processing">https://github.com/unpingco/Python-for-Signal-Processing</a> </p>
+</li>
+<li><p>Audio for Deep Learning (남기현님) <a target="_blank" rel="noopener" href="https://tykimos.github.io/2019/07/04/ISS_2nd_Deep_Learning_Conference_All_Together/">https://tykimos.github.io/2019/07/04/ISS_2nd_Deep_Learning_Conference_All_Together/</a> </p>
+</li>
+<li><p>오디오 전처리 작업을 위한 연습 (박수철님) <a target="_blank" rel="noopener" href="https://github.com/scpark20/audio-preprocessing-practice">https://github.com/scpark20/audio-preprocessing-practice</a> </p>
+</li>
+<li><p>Musical Applications of Machine Learning <a target="_blank" rel="noopener" href="https://mac.kaist.ac.kr/~juhan/gct634/">https://mac.kaist.ac.kr/~juhan/gct634/</a> </p>
+</li>
+<li><p>Awesome audio study materials for Korean (최근우님) <a target="_blank" rel="noopener" href="https://github.com/keunwoochoi/awesome-audio-study-materials-for-korean">https://github.com/keunwoochoi/awesome-audio-study-materials-for-korean</a></p>
+</li>
+<li><p>T Academy(출처) <a target="_blank" rel="noopener" href="https://tacademy.skplanet.com/live/player/onlineLectureDetail.action?seq=178">https://tacademy.skplanet.com/live/player/onlineLectureDetail.action?seq=178</a></p>
+</li>
+</ul>
+<h2 id="1-Digital-Signal-Processing"><a href="#1-Digital-Signal-Processing" class="headerlink" title="1. Digital Signal Processing"></a>1. Digital Signal Processing</h2><p>소리 signal를 어떠한 데이터 타입으로 표현하며, 소리와 관련된 task를 해결하는데 있습니다. 그렇다면 소리는 어떠한 데이터를 가지고 있을까요?</p>
+<h3 id="Sound"><a href="#Sound" class="headerlink" title="Sound?"></a>Sound?</h3><p>소리는 일반적으로 진동으로 인한 공기의 압축으로 생성됩니다. 그렇다면 압축이 얼마나 됬느냐에 따라서 표현되것이 바로 Wave(파동)인데요. 파동은 진동하며 공간&#x2F;매질을 전파해 나가는 현상입니다. 질량의 이동은 없지만 에너지&#x2F;운동량의 운반은 존재합니다.</p>
+<p>Wave에서 저희가 얻을수 있는 정보는 크게 3가지가 있습니다.</p>
+<ul>
+<li>Phase(Degress of displacement) : 위상</li>
+<li>Amplitude(Intensity) : 진폭</li>
+<li>Frequency : 주파수</li>
+</ul>
+<h3 id="Sampling"><a href="#Sampling" class="headerlink" title="Sampling"></a>Sampling</h3><p>샘플링은 무엇일까요?? 아날로그 정보를 잘게 쪼개서 discrete한 디지털 정보로 표현해야합니다. 우리는 무한하게 쪼개서 저장할수 없으니, 어떤 기준을 가지고 아날로그 정보를 쪼개서 대표값을 취하게 됩니다.</p>
+<p><code>Convert into a sqeuence of binary values via Sampling and Quantization</code></p>
+<h3 id="1-1-Time-domain"><a href="#1-1-Time-domain" class="headerlink" title="1.1. Time domain"></a>1.1. Time domain</h3><p>시간을 기준으로 아날로그 시그널을 쪼개게 되는 것을 의미합니다. Sampling을 통하여 컴퓨터는 소리 sequence를 binary value로 받아드리게 됩니다.</p>
+<p><strong>Sampling rate : 얼마나 잘게 쪼갤 것인가?</strong><br><br>잘개 쪼갤수록 원본 데이터와 거이 가까워지기 떄문에 좋지만 Data의 양이 증가하게 됩니다. 만약 너무 크게 쪼개게 된다면, 원본 데이터로 reconstruct하기 힘들어 질 것입니다.</p>
+<p><strong>Sampling theorem</strong><br><br>샘플링 레이트가 최대 frequency의 2배 보다 커져야 한다는 것입니다.<br>\( f_{s} &gt; 2f_{m} \) 여기서 \(f_{s}\)는 sampling rate, 그리고 \(f_{m}\)은 maximum frequency를 말합니다.</p>
+<ul>
+<li>Nyqusit frequency &#x3D; \(f_{s}&#x2F;2\), sampling rate의 절반입니다.</li>
+</ul>
+<p>일반적으로 Sampling은 인간의 청각 영역에 맞게 형성이 됩니다.</p>
+<ul>
+<li>Audio CD : 44.1 kHz(44100 sample&#x2F;second)</li>
+<li>Speech communication : 8 kHz(8000 sample&#x2F;second)</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># library load</span></span><br><span class="line"><span class="keyword">import</span> soundfile <span class="keyword">as</span> sf</span><br><span class="line"><span class="keyword">import</span> librosa</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">filename = <span class="string">&quot;./wav/voice.wav&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 파일 로드 방법 1</span></span><br><span class="line">y, sr = sf.read(filename, dtype=<span class="string">&#x27;int16&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Sample Rate: &quot;</span>, sr)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;DATA: &quot;</span>, <span class="built_in">type</span>(y), y.shape, <span class="built_in">len</span>(y), y)</span><br><span class="line"></span><br><span class="line">dur = <span class="built_in">len</span>(y) / sr</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;dur : &quot;</span>, dur)</span><br></pre></td></tr></table></figure>
+
+<pre><code>Sample Rate:  16000
+DATA:  &lt;class &#39;numpy.ndarray&#39;&gt; (48944,) 48944 [ -9   1  -5 ... -20 -16 -24]
+dur :  3.059
+</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 파일 로드 방법 2</span></span><br><span class="line">y, sr = librosa.load(filename, mono=<span class="literal">True</span>, sr=<span class="number">16000</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Sample Rate: &quot;</span>, sr)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;DATA: &quot;</span>, <span class="built_in">type</span>(y), y.shape, y)</span><br><span class="line">dur = <span class="built_in">len</span>(y) / sr</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;dur : &quot;</span>, dur)</span><br></pre></td></tr></table></figure>
+
+<pre><code>Sample Rate:  16000
+DATA:  &lt;class &#39;numpy.ndarray&#39;&gt; (48944,) [-2.7465820e-04  3.0517578e-05 -1.5258789e-04 ... -6.1035156e-04
+ -4.8828125e-04 -7.3242188e-04]
+dur :  3.059
+</code></pre>
+<h3 id="Resampling"><a href="#Resampling" class="headerlink" title="Resampling"></a>Resampling</h3><p>샘플링된 데이터를 다시금 더 높은 sampling rate 혹은 더 낮은 sampling rate로 다시 샘플링할수 있습니다. 이때는 일반적으로 interpolation(보간)을 할때는 low-pass filter를 사용합니다.(Windowed sinc function)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> IPython.display <span class="keyword">as</span> ipd</span><br><span class="line">y_8k = librosa.resample(y, sr, <span class="number">8000</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipd.Audio(y_8k, rate=<span class="number">8000</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">len</span>(y_8k)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>24472
+</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># duration</span></span><br><span class="line"><span class="built_in">len</span>(y_8k)/<span class="number">8000</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>3.059
+</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">y_2k = librosa.resample(y, sr, <span class="number">4000</span>)</span><br><span class="line">ipd.Audio(y_2k, rate=<span class="number">2000</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">len</span>(y_2k)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>12236
+</code></pre>
+<h3 id="Nomalization-Quantization"><a href="#Nomalization-Quantization" class="headerlink" title="Nomalization &amp; Quantization"></a>Nomalization &amp; Quantization</h3><p>시간의 기준이 아닌 실제 amplitude의 real valued 를 기준으로 시그널의 값을 조절합니다. Amplitude를 이산적인 구간으로 나누고, signal 데이터의 Amplitude를 반올림하게 됩니다.</p>
+<p>그렇다면 이산적인 구간은 어떻게 나눌수 있을까요?, bit의 비트에 의해서 결정됩니다. </p>
+<ul>
+<li>B bit의 Quantization : \(-2^{B-1}\) ~ \(2^{B-1}-1\)</li>
+<li>Audio CD의 Quantization (16 bits) : \(-2^{15}\) ~ \(2^{15}-1\)</li>
+<li>위 값들은 보통 -1.0 ~ 1.0  영역으로 scaling되기도 합니다.</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Normalize</span></span><br><span class="line">normed_wav = y / <span class="built_in">max</span>(np.<span class="built_in">abs</span>(y))</span><br><span class="line">ipd.Audio(normed_wav, rate=sr)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#quantization 하면 음질은 떨어지지만 light한 자료형이 된다.</span></span><br><span class="line">Bit = <span class="number">8</span></span><br><span class="line">max_value = <span class="number">2</span> ** (Bit-<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">quantized_8_wav = normed_wav * max_value</span><br><span class="line">quantized_8_wav = np.<span class="built_in">round</span>(quantized_8_wav).astype(<span class="built_in">int</span>)</span><br><span class="line">quantized_8_wav = np.clip(quantized_8_wav, -max_value, max_value-<span class="number">1</span>)</span><br><span class="line">ipd.Audio(quantized_8_wav, rate=sr)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="mu-law-encoding"><a href="#mu-law-encoding" class="headerlink" title="mu-law encoding"></a>mu-law encoding</h3><p>사람의 귀는 소리의 amplitude에 대해 log적으로 반응합니다. 즉, 작은소리의 차이는 잘잡아내는데 반해 소리가 커질수록 그 차이를 잘 느끼지 못합니다. 이러한 특성을 wave값을 표현하는데 반영해서 작은값에는 높은 분별력(high resolution)을, 큰값끼리는 낮은 분별력(low resolution)을 갖도록 합니다</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">mu_law</span>(<span class="params">x, mu=<span class="number">255</span></span>):</span><br><span class="line">    <span class="keyword">return</span> np.sign(x) * np.log(<span class="number">1</span> + mu * np.<span class="built_in">abs</span>(x)) / np.log(<span class="number">1</span> + mu)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x = np.linspace(-<span class="number">1</span>, <span class="number">1</span>, <span class="number">1000</span>)</span><br><span class="line">x_mu = mu_law(x)</span><br><span class="line"></span><br><span class="line">plt.figure(figsize=[<span class="number">6</span>, <span class="number">4</span>])</span><br><span class="line">plt.plot(x)</span><br><span class="line">plt.plot(x_mu)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%ED%95%98%EA%B8%B0-8/output_18_0.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wav_mulaw = mu_law(normed_wav)</span><br><span class="line">ipd.Audio(wav_mulaw, rate=sr)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>to be continued…<br>뒷장에서 계속됩니다.</p>
+</blockquote>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2020-11-29T17:54:54.000Z" title="2020. 11. 30. 오전 2:54:54">2020-11-30</time></span><span class="level-item">Updated&nbsp;<time dateTime="2023-09-30T11:43:13.402Z" title="2023. 9. 30. 오후 8:43:13">2023-09-30</time></span><span class="level-item"><a class="link-muted" href="/categories/Study/">Study</a></span><span class="level-item">6 minutes read (About 902 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/11/30/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%847/">딥러닝-입문과-준비7</a></p><div class="content"><h2 id="딥러닝-시작해보기-7"><a href="#딥러닝-시작해보기-7" class="headerlink" title="딥러닝 시작해보기-7"></a>딥러닝 시작해보기-7</h2><h3 id="합성곱-Convolution"><a href="#합성곱-Convolution" class="headerlink" title="합성곱(Convolution)"></a>합성곱(Convolution)</h3><p>  Convolution?<br>  <img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%847/conv_1.png" alt="conv">  </p>
+<p>  <strong>정의</strong><br>  합성곱 연산은 두 함수 f, g 가운데 하나의 함수를 반전(reverse), 전이(shift)시킨 다음, 다른 하나의 함수와 곱한 결과를 적분하는 것을 의미한다. 이를 수학 기호로 표시하면 다음과 같다.<br>  <img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%847/1.PNG" alt="1"></p>
+<p>  또한 g 함수 대신에 f 함수를 반전, 전이 시키는 경우 다음과 같이 표시할 수도 있다. 이 두 연산은 형태는 다르지만 같은 결과값을 갖는다.<br>  <img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%847/2.PNG" alt="2"></p>
+<p>  위의 적분에서 적분 구간은 함수 f와 g가 정의된 범위에 따라서 달라진다.</p>
+<p>  또한 두 확률 변수 X와 Y가 있을 때 각각의 확률 밀도 함수를 f와 g라고 하면, X+Y의 확률 밀도 함수는 \(f * g\)로 표시할 수 있다. – <a target="_blank" rel="noopener" href="https://ko.wikipedia.org/wiki/%ED%95%A9%EC%84%B1%EA%B3%B1">Wikipedia</a></p>
+<blockquote>
+<p>무엇인지 모르겠죠? 쉽게 말하자면<br>  기존 MLP에서는 이미지가 살짝이라도 회전이 되거나 위치 이동이 있다면 신경망 자체를 다시 학습해야 하지만<br>  CNN은 이미지의 변화가 있어도 재학습 없어도 가능함.</p>
+</blockquote>
+<p>  <img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%847/conv_2.PNG" alt="conv2"><br>  모든 pixel을 비교할 게 절대 아님. Feature 추출에 중점을 둠.</p>
+<p>  <img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%847/conv_3.PNG" alt="conv3">   </p>
+<blockquote>
+<p>사진에 보이는 \(C_in * C_out\)번의 합성곱 연산 bias는 하나의 벡터</p>
+</blockquote>
+<p>  Filter(kernel)의 크기에 따라 영상의 크기가 줄어드는 문제점을 해결하기 위해 padding을 쓴다.<br>  <img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%847/conv_4.PNG" alt="conv4"><br>  크기가 (2N + 1)인 커널에 상하좌우에 N개 Zero padding을 해주면 된다.</p>
+<p>  Sliding Window 방식으로 커널이 이동되는데 그 크기를 조절하려면 Stride를 쓴다.<br>  너무 크면 출력 Feature Map이 과도하게 줄어드는 경우가 발생한다.</p>
+<h3 id="보다-효율적인-Conv-연산을-하기-위해서는-1x1-Conv를-넣는다"><a href="#보다-효율적인-Conv-연산을-하기-위해서는-1x1-Conv를-넣는다" class="headerlink" title="보다 효율적인 Conv 연산을 하기 위해서는 1x1 Conv를 넣는다"></a>보다 효율적인 Conv 연산을 하기 위해서는 1x1 Conv를 넣는다</h3><p>  연산량, 파라미터 개수를 줄이기 위해 BottleNeck 구조를 활용한다.<br>  하필 1x1 ??<br>  <img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%847/conv_5.PNG" alt="conv5"><br>  3x3 filter 한개와 1x1 + 3x3 parameter 비교</p>
+<p>  그래도 모르겠다면??</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">np.random((<span class="number">3</span>, <span class="number">3</span>)).shape == (np.random((<span class="number">3</span>, <span class="number">1</span>)) * np.random((<span class="number">1</span>, <span class="number">3</span>)).shape)</span><br><span class="line">&gt;&gt; <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># keras</span></span><br><span class="line"><span class="comment"># k - kernel_size(ex. 3, 5, 7...)</span></span><br><span class="line"><span class="comment"># n_filter - number of filters/channels 필터 갯수</span></span><br><span class="line">conv1_1 = Conv(n_filters, (<span class="number">1</span>, k))(input_1)</span><br><span class="line">conv1_2 = Conv(n_filters, (k, <span class="number">1</span>))(conv1_1)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 왜 병목?</span></span><br><span class="line">conv2 = Conv2D(<span class="number">96</span>, (<span class="number">1</span>, <span class="number">1</span>), ...)(conv1) </span><br><span class="line"><span class="comment"># 줄였다가(receptive Field는 그대로, Feature map을 미리 줄임.)</span></span><br><span class="line">conv3 = Conv2D(<span class="number">96</span>, (<span class="number">3</span>, <span class="number">3</span>), ...)(conv2) </span><br><span class="line">conv4 = Conv2D(<span class="number">128</span>, (<span class="number">1</span>, <span class="number">1</span>), ...)(conv3) <span class="comment"># 다시 늘림</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>  항등행렬을 떠올리면 이해가 갈것이다.</p>
+<h3 id="CNN-만들었는데-너무-느리네-어떻게-하면-빠르게-할-수-있을까…"><a href="#CNN-만들었는데-너무-느리네-어떻게-하면-빠르게-할-수-있을까…" class="headerlink" title="CNN 만들었는데 너무 느리네? 어떻게 하면 빠르게 할 수 있을까…"></a>CNN 만들었는데 너무 느리네? 어떻게 하면 빠르게 할 수 있을까…</h3><p>  Conv filter를 더 넓게 쓴다. –&gt; GPU 연산이 쉬워진다  </p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 이렇게 되어있는 걸</span></span><br><span class="line">conv = Conv2D(<span class="number">96</span>, (<span class="number">3</span>, <span class="number">3</span>), ...)(conv)</span><br><span class="line">conv = Conv2D(<span class="number">96</span>, (<span class="number">3</span>, <span class="number">3</span>), ...)(conv)</span><br><span class="line"><span class="comment"># 아래처럼 바꾼다.</span></span><br><span class="line">conv = Conv2D(<span class="number">128</span>, (<span class="number">3</span>, <span class="number">3</span>), ...)(conv)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>GPU는 병렬로 처리하기 때문에 필터 갯수를 늘리면 더욱 빨라진다.<br>  쉽게 말하면 96개씩 두번보다 128개씩 한번이 더 빠르다.  </p>
+</blockquote>
+<p>  설명.</p>
+<ol>
+<li>96 &#x2F;&#x2F; 3 &#x3D; 32</li>
+<li>2- layer을 1- layer로 바꿀땐</li>
+<li>32 &#x2F;&#x2F; 2 &#x3D; 16</li>
+<li>16^0.5 &#x3D; 4</li>
+<li>4 * 32 &#x3D; 128</li>
+</ol>
+<p>  또 다른 방법<br>  각 채널에서 별도의 2d conv를 하는 방법<br>  in_channels * channel_multipliter 중간채널은 연결되고 1x1 conv로 out_channels에 매핑</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Keras</span></span><br><span class="line"><span class="keyword">from</span> keras.layers <span class="keyword">import</span> SeparableConv2D</span><br><span class="line">net = SeparableConv2D(<span class="number">32</span>, (<span class="number">3</span>, <span class="number">3</span>))(net)</span><br><span class="line"><span class="comment"># 그냥 2d</span></span><br></pre></td></tr></table></figure>
+
+<p>  출처 :<br>  <a target="_blank" rel="noopener" href="https://colab.research.google.com/drive/1i0Fwh-d8kF05o4QRfJG5dZt_P7G85MCS">source1</a><br>  <a target="_blank" rel="noopener" href="https://towardsdatascience.com/speeding-up-convolutional-neural-networks-240beac5e30f">source2</a></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2020-11-27T13:54:12.000Z" title="2020. 11. 27. 오후 10:54:12">2020-11-27</time></span><span class="level-item">Updated&nbsp;<time dateTime="2023-09-11T23:26:22.015Z" title="2023. 9. 12. 오전 8:26:22">2023-09-12</time></span><span class="level-item"><a class="link-muted" href="/categories/Study/">Study</a></span><span class="level-item">8 minutes read (About 1209 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/11/27/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%846/">딥러닝-입문과-준비6</a></p><div class="content"><h2 id="딥러닝-시작해보기-6"><a href="#딥러닝-시작해보기-6" class="headerlink" title="딥러닝 시작해보기-6"></a>딥러닝 시작해보기-6</h2><h3 id="💥Remind-딥러닝에-비선형-활성화-함수를-사용하는-이유"><a href="#💥Remind-딥러닝에-비선형-활성화-함수를-사용하는-이유" class="headerlink" title="💥Remind!! 딥러닝에 비선형 활성화 함수를 사용하는 이유"></a>💥Remind!! 딥러닝에 비선형 활성화 함수를 사용하는 이유</h3><p>  선형 함수로는 XOR과 같은 non-linear한 문제는 해결이 안됨;;</p>
+<blockquote>
+<p>그러면 Hidden Layer를 늘리면 되지 않을까?<br>  $f(ax+by) &#x3D; af(x) + bf(y)$ 라는 특징 때문에<br>  N-layer 깊이를 아무리 쌓아도 1-Layer로 동작함.</p>
+</blockquote>
+<h3 id="최적화-Opt-알고리즘"><a href="#최적화-Opt-알고리즘" class="headerlink" title="최적화(Opt) 알고리즘"></a>최적화(Opt) 알고리즘</h3><ul>
+<li><p>경사하강법(GD)<br>$$\theta &#x3D; \theta - \eta \nabla_\theta S(\theta)$$  </p>
+<p>Network의 parameter&#x3D;$ \theta $ 로 할때 손실함수 $ J(\theta) $의 값을 최소화하기 위해 기울기<br>$ \nabla J(\theta)$를 이용하는 방법<br>GD에서는 Gradient의 반대 방향으로 일정 크기(lr)만큼 이동하는 것을 반복하여 loss function의 값을 최소화 하는 $ \theta $의 값을 찾음,  </p>
+</li>
+<li><p>lr(학습률) $ \eta $ 는 보통 1e-3 ~ 1e-4 사이에서 사용함.<br>  너무 크면 global minimum을 지나치고 너무 작으면 Local Minimum에 빠짐.</p>
+</li>
+<li><p>확률적 경사하강법(SGD)<br>전체 Training set을 사용하는 것을 batch Gradient Descent, 계산량이 많아지는 것을 방지하기 위해<br>mini-batch에 대해서만 손실함수를 계산하는 확률적 GD를 사용함.<br>같은 시간에 더 많은 step를 갈 수 있음, 여러번 반복할 경우 batch의 결과와 비슷함</p>
+</li>
+<li><p>GD vs SGD<br>GD : 확실한데 너무 느림 | SGD : 조금 헤메지만 빠름</p>
+</li>
+<li><p>Momentum : 현재 Gradient를 통해 이동하는 방향과 별개로 과거의 이동방식을 기억하면서 일종의 관성을 주는 방식</p>
+</li>
+<li><p>AdaGrad(Adaptive Gradient)</p>
+<ol>
+<li>많이 변화했던 변수들은 step size를 작게 하는 것<br>자주 등장하거나 변화를 많이 한 변수들은 optimum에 가까이 있을 확률이 높기 때문에 작은 크기로 이동하면서 미세조절</li>
+<li>적게 변화한 변수들은 많이 이동해야할 확률이 높기 때문에 먼저 빠르게 loss값을 줄이는 방식으로 이동하는 방식<br>학습을 계속 진행하면 step size가 너무 줄어드는 단점이 있음.<br><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%846/ckpt_05.PNG" alt="AdaGrad"></li>
+</ol>
+</li>
+<li><p>RMSProp<br>합을 지수평균으로 대체하여 Adagrad의 단점을 해결<br>G가 무한정 커지지는 않으면서 최근 변화량의 변수간 상대적인 크기 차이는 유지할 수 있음.<br><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%846/ckpt_04.PNG" alt="RMsprop"></p>
+</li>
+<li><p>Adam<br>Momentum + RMSProp</p>
+<ol>
+<li>지금까지 계산해온 기울기의 지수평균을 저장</li>
+<li>rmsprop과 유사하게 Gradient의 제곱값의 지수평균을 저장<br><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%846/ckpt_06.PNG" alt="Adam"></li>
+</ol>
+</li>
+</ul>
+<h3 id="Overfitting-과적합"><a href="#Overfitting-과적합" class="headerlink" title="Overfitting(과적합)"></a>Overfitting(과적합)</h3><p>  Training Set의 지엽적인 특성까지 반영해 Variance High로 Training되어서 Training Set을 암기해버리는 현상<br>  <em>Test Set을 잘 예측하지 못함</em><br>  주로 표현력이 높은 모델, 즉 파라미터가 많은 모델에 발생</p>
+<ol>
+<li>정규화(Regularization)</li>
+</ol>
+<ul>
+<li>손실함수에 가중치의 크기를 포함</li>
+<li>가중치가 작아지도록 학습한다는 것은 Outlier(Noise)의 영향을 적게 받음</li>
+</ul>
+<h4 id="L2-정규화"><a href="#L2-정규화" class="headerlink" title="L2 정규화"></a>L2 정규화</h4><p><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%846/ckpt_08.PNG" alt="L2"></p>
+<p><em>Rigde Regression</em></p>
+<h4 id="L1-정규화"><a href="#L1-정규화" class="headerlink" title="L1 정규화"></a>L1 정규화</h4><p><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%846/ckpt_09.PNG" alt="L1"><br>Sparse Model에 알맞음.. 작은 가중치들이 거의 0으로 수렴하여 몇개의 중요한 가중치들만 남음. </p>
+<p><em>Lasso Regression</em></p>
+<p>미분 불가능한 점이 있기 때문에 Gradient-Base Learning에는 주의..<br><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%846/ckpt_10.PNG" alt="L1주의점"></p>
+<h4 id="DropOut"><a href="#DropOut" class="headerlink" title="DropOut"></a>DropOut</h4><p>각 레이어의 일정 비율로 뉴런의 출력 값을 0으로 만들어 나머지 뉴런들로 학습하는 방법<br>과적합을 효과적으로 예방 가능(Network 내부의 Ensemble 학습으로 볼 수 있음)</p>
+<p>역전파는 ReLU처럼 동작<br>Forward Propagation때 시그널을 통과시킨 뉴런은 Backward때도 통과시킴<br>drop된 뉴런은 Backward Propagation때도 시그널 차단</p>
+<p>반면, TEST때는 모든 뉴런에 신호를 전달함</p>
+<h4 id="Batch-Normalization"><a href="#Batch-Normalization" class="headerlink" title="Batch Normalization"></a>Batch Normalization</h4><p>학습하는 이전 층의 파라미터 변화로 현재층의 입력 분포가 바뀌는 현상을 내부 공분산 변화(Internal Covariate Shift)<br>이전 층의 작은 파라미터 변화가 증폭되어 뒷 레이어에 큰 영향을 받음.<br>그래서…</p>
+<p>BN(2015)</p>
+<ul>
+<li>Gradient Vanishing, Exploding을 방지하는 대표적인 방법</li>
+<li>직접적인 방법임.</li>
+<li>Training 과정 자체를 안정화시켜 학습속도를 가속화</li>
+<li>평균과 분산을 조절하는 과정이 <em>NN 안에 포함</em> 되어 있다는 것이 핵심적</li>
+</ul>
+<p>Training할때<br>각 Mini Batch마다 $ \gamma $ 와 $ \beta $를 구하고 저장해 둠</p>
+<p>Test할때<br>구했던 $ \gamma $  와 $ \beta $ 의 평균을 사용</p>
+<p><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%846/ckpt_11.PNG" alt="BN"></p>
+<h4 id="Data-Augmentation"><a href="#Data-Augmentation" class="headerlink" title="Data Augmentation"></a>Data Augmentation</h4><p>일종의 Regularization작업, 데이터가 적을 때 사용하면 매우 효과적<br>즉 데이터 변형</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2020-11-25T12:49:48.000Z" title="2020. 11. 25. 오후 9:49:48">2020-11-25</time></span><span class="level-item">Updated&nbsp;<time dateTime="2023-09-11T23:21:40.023Z" title="2023. 9. 12. 오전 8:21:40">2023-09-12</time></span><span class="level-item"><a class="link-muted" href="/categories/Study/">Study</a></span><span class="level-item">5 minutes read (About 796 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/11/25/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%845/">딥러닝-입문과-준비5</a></p><div class="content"><h2 id="딥러닝-시작해보기-5"><a href="#딥러닝-시작해보기-5" class="headerlink" title="딥러닝 시작해보기-5"></a>딥러닝 시작해보기-5</h2><h3 id="선형대수-배워보기-행렬을-아무리-곱하고-더해도-선모양"><a href="#선형대수-배워보기-행렬을-아무리-곱하고-더해도-선모양" class="headerlink" title="선형대수 배워보기(행렬을 아무리 곱하고 더해도 선모양)"></a>선형대수 배워보기(행렬을 아무리 곱하고 더해도 선모양)</h3><h4 id="Scala-크기만-존재하는-양"><a href="#Scala-크기만-존재하는-양" class="headerlink" title="Scala : 크기만 존재하는 양"></a>Scala : 크기만 존재하는 양</h4><h4 id="Vector-속도-위치이동-힘-공간뒤틀림과-같이-크기와-방향이-모두-존재하는-양"><a href="#Vector-속도-위치이동-힘-공간뒤틀림과-같이-크기와-방향이-모두-존재하는-양" class="headerlink" title="Vector : 속도, 위치이동, 힘, 공간뒤틀림과 같이 크기와 방향이 모두 존재하는 양"></a>Vector : 속도, 위치이동, 힘, 공간뒤틀림과 같이 크기와 방향이 모두 존재하는 양</h4><p><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%845/slido51_1.PNG" alt="스칼라와벡터"></p>
+<h4 id="Norm-n차원-벡터-vec-x-x-1-x-2-cdots-x-n"><a href="#Norm-n차원-벡터-vec-x-x-1-x-2-cdots-x-n" class="headerlink" title="Norm ? n차원 벡터 $$\vec{x} &#x3D; (x_1, x_2, \cdots x_n)$$"></a>Norm ? n차원 벡터 $$\vec{x} &#x3D; (x_1, x_2, \cdots x_n)$$</h4><p>Norm $$\lVert x \rVert &#x3D; \sqrt{x_1^1 + x_2^2 + \cdots + x_n^2}$$</p>
+<blockquote>
+<p>“원점 O에서 점\(x_1, x_2, \cdots, x_n\) 까지의 거리”</p>
+</blockquote>
+<h4 id="내적-Inner-product-Dot-product"><a href="#내적-Inner-product-Dot-product" class="headerlink" title="내적 ?  Inner product, Dot product"></a>내적 ?  Inner product, Dot product</h4><h4 id="행렬끼리-곱할-때는-차원을-주의한다"><a href="#행렬끼리-곱할-때는-차원을-주의한다" class="headerlink" title="행렬끼리 곱할 때는 차원을 주의한다."></a>행렬끼리 곱할 때는 차원을 주의한다.</h4><blockquote>
+<p>A(m, n) * B(n, m) 만 가능</p>
+</blockquote>
+<h4 id="Transpose-전치행렬-행과-열을-뒤바꿈"><a href="#Transpose-전치행렬-행과-열을-뒤바꿈" class="headerlink" title="Transpose: 전치행렬(행과 열을 뒤바꿈)"></a>Transpose: 전치행렬(행과 열을 뒤바꿈)</h4><blockquote>
+<p>A.T</p>
+</blockquote>
+<h3 id="numpy-연산-Element-wise-operation"><a href="#numpy-연산-Element-wise-operation" class="headerlink" title="numpy 연산(Element-wise operation)"></a>numpy 연산(Element-wise operation)</h3><blockquote>
+<p>np.dot(x, y) (aka 내적, dot-product)와  x * y(element-wise)는 서로 다름.</p>
+</blockquote>
+<h3 id="numpy-비교-논리연산-element-wise-operation"><a href="#numpy-비교-논리연산-element-wise-operation" class="headerlink" title="numpy 비교, 논리연산(element-wise operation)"></a>numpy 비교, 논리연산(element-wise operation)</h3><h3 id="numpy-Reductions"><a href="#numpy-Reductions" class="headerlink" title="numpy Reductions"></a>numpy Reductions</h3><blockquote>
+<p>argmax() : 최대값있는 인덱스를 리턴, argmin() : 최소값의 인덱스 리턴</p>
+</blockquote>
+<h3 id="np-all-np-any"><a href="#np-all-np-any" class="headerlink" title="np.all, np.any?"></a>np.all, np.any?</h3><blockquote>
+<p>ALL : Array내 모든 값이 TRUE인가?<br>  any : Array내 값이 하나라도 TRUE인가?</p>
+</blockquote>
+<h3 id="np-mean-np-median-np-std-등-통계함수-사용-가능"><a href="#np-mean-np-median-np-std-등-통계함수-사용-가능" class="headerlink" title="np.mean, np.median, np.std 등 통계함수 사용 가능"></a>np.mean, np.median, np.std 등 통계함수 사용 가능</h3><h4 id="딥러닝에-대한-환상"><a href="#딥러닝에-대한-환상" class="headerlink" title="딥러닝에 대한 환상"></a>딥러닝에 대한 환상</h4><ol>
+<li><p>복잡한 문제도 층을 깊고 넓게 쌓으면 해결된다 –&gt; Gradient Vanhshing, Initialize fault 으하하핰ㅋㅋㅋ</p>
+</li>
+<li><p>$$Sigmoid(z) &#x3D; \frac{1} {1 + e^{-z}}$$<br>  Sigmoid 도함수의 최대값은 1&#x2F;4 … –&gt; 그래서 Gradient Vanishing 나는거임 ㅇㅇ</p>
+</li>
+</ol>
+<h4 id="가중치-초기화"><a href="#가중치-초기화" class="headerlink" title="가중치 초기화"></a>가중치 초기화</h4><ol>
+<li><p>초기화의 중요성<br>  $ y &#x3D; Wx+b $ 에서<br>   w가 100, b가 50이라면 x가 0.01이더라도 y는 51이 됨<br>  역전파때 sigmoid 함수 통과시키면 $ Sigmoid’(51) $ 리턴됨<br>  하지만 y가 5만 넘어도 $ Sigmoid (y) $ 는 0에 수렴<br>  –&gt; 이것이 바로 Gradient Vanishing…</p>
+</li>
+<li><p>그래서 입력층의 가중치w를 모두 0으로 리셋!<br>  Forward Propagation때 두번째 층 뉴런에 모두 같은 값이 전달됨<br>  Backward Propagation때 두째 층 가중치가 모두 똑같이 업데이트 &#x3D;&#x3D;&gt; 신경망 표현력 제한</p>
+</li>
+<li><p>Bias는 0으로 초기화하는게 일반적으로 효율적</p>
+</li>
+</ol>
+<h4 id="가중치-초기화-2"><a href="#가중치-초기화-2" class="headerlink" title="가중치 초기화 2"></a>가중치 초기화 2</h4><ol>
+<li><p>표준 정규분포를 이용한 가중치 초기화<br>  Sigmoid함수의 출력값이 극단적으로(0 or 1)에 치우치는 현상 –&gt; Gradient Vanishing</p>
+</li>
+<li><p>표준편차를 0.01로 하는 정규분포로 초기화<br>  가중치가 모여 있음 &#x3D;&gt; 기울기 소실 문제 어느정도 완화됨</p>
+</li>
+</ol>
+<h4 id="가중치-초기화-3"><a href="#가중치-초기화-3" class="headerlink" title="가중치 초기화 3"></a>가중치 초기화 3</h4><p>  Xavier초기화 방법(2010)<br>  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">w = np.random.randn(n_input, n_output) / (n_input) ** <span class="number">0.5</span></span><br></pre></td></tr></table></figure><br>  Sigmoid와 같은 S자 함수의 경우 출력값들이 정규분포 형태이어야 안정적 학습 가능  </p>
+<ul>
+<li><p>Sigmoid function과 Xavier Init방법을 사용했을 경우 그래프<br>  <img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%845/ckpt_01.PNG" alt="sigmodi"></p>
+</li>
+<li><p>ReLU 계열 함수에는 적절하지 않음<br>layer를 거쳐갈 수록 0에 수렴(converge)</p>
+<p><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%845/ckpt_02.PNG" alt="reluNo"></p>
+</li>
+</ul>
+<h4 id="가중치-초기화-4"><a href="#가중치-초기화-4" class="headerlink" title="가중치 초기화 4"></a>가중치 초기화 4</h4><p>  He 초기화 방법(2015)<br>  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">w = np.random.randn(n_input, n_output) / (n_input / <span class="number">2</span>) ** <span class="number">0.5</span></span><br></pre></td></tr></table></figure></p>
+<p>  RELU + He init –&gt; 10 layer를 거쳐도 표준편차가 0으로 수렴하지 않음<br>  <img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%845/ckpt_03.PNG" alt="relu"></p>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><ul>
+<li>가중치 초기화는 너무나 중요함</li>
+<li>tanh의 경우 Xavier Init 방법이 효율적</li>
+<li>ReLU계열 함수에는 He Init 방법이 효율적</li>
+<li>최근엔 대부분 He Init를 주로 사용</li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2020-11-24T13:24:21.000Z" title="2020. 11. 24. 오후 10:24:21">2020-11-24</time></span><span class="level-item">Updated&nbsp;<time dateTime="2023-09-11T23:27:16.220Z" title="2023. 9. 12. 오전 8:27:16">2023-09-12</time></span><span class="level-item"><a class="link-muted" href="/categories/Study/">Study</a></span><span class="level-item">4 minutes read (About 591 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/11/24/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%844/">딥러닝-입문과-준비4</a></p><div class="content"><h2 id="딥러닝-시작해보기-4"><a href="#딥러닝-시작해보기-4" class="headerlink" title="딥러닝 시작해보기-4"></a>딥러닝 시작해보기-4</h2><h3 id="인공신경망과-손실함수"><a href="#인공신경망과-손실함수" class="headerlink" title="인공신경망과 손실함수"></a>인공신경망과 손실함수</h3><ol>
+<li>인공신경망의 기본 구조</li>
+</ol>
+<ul>
+<li>뇌의 학습방법을 수학적으로 모델링한 기계학습 알고리즘</li>
+<li>기본 구조 : y &#x3D; Wx+b<br> <img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%844/Letitgo_1.PNG" alt="인공신경망"><br> $ x_i $ : 입력, $ w_i $: 가중치, b : bias, f: 활성화함수<br> u : 결합(Net), z: 출력</li>
+<li>뉴런에는 선형 결합과 활성화 함수 기능이 들어있음</li>
+<li>입력층, 은닉층, 출력층으로 구성됨</li>
+<li>각 노드의 뉴런 출력은 직접 전달되는 정보에만 의존할 뿐 다른 노드와는 무관</li>
+<li>그래서? 병렬처리가 가능함.</li>
+</ul>
+<ol start="2">
+<li>손실 함수(Loss or Cost function)</li>
+</ol>
+<ul>
+<li>신경망의 출력값과 실제 결과값의 차이를 정의하는 함수</li>
+<li>신경망 학습목표는 손실함수를 최소화 하는 방향으로 움직여야 함</li>
+<li>SGD, Adam 등의 학습 최적화 알고리즘</li>
+</ul>
+<ol start="3">
+<li>손실 함수</li>
+</ol>
+<ul>
+<li><p>회귀(Regression)<br> 제곱 오차(MSE) 사용, 최근에는 rmse, mae의 장점이 있는 Huber Loss 사용하는 추세<br><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%844/Letitgo_4.PNG" alt="회귀"></p>
+</li>
+<li><p>Huber Loss?<br>MAE + MSE -&gt; for Time Series Data!!<br><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%844/Letitgo_5.PNG" alt="huber"><br><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%844/Letitgo_7.PNG" alt="huber Loss"></p>
+</li>
+<li><p>분류(Classification)<br> 활성화 함수 : softmax, 손실함수 : cross-entropy<br><img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%844/Letitgo_2.PNG" alt="분류"></p>
+</li>
+</ul>
+<h3 id="알고리즘과-역전파"><a href="#알고리즘과-역전파" class="headerlink" title="알고리즘과 역전파"></a>알고리즘과 역전파</h3><ol>
+<li>학습 알고리즘</li>
+</ol>
+<ul>
+<li>경사 하강법: 기울기를 이용하여 손실함수 S($ \theta $) 값을 최적화</li>
+<li>gradient(기울기)의 반대 방향으로 일정 크기만큼 이동하는 것을 반복하여<br> 손실함수의 값을 최소화하는 $ \theta $의 값을 찾음</li>
+<li>\[\theta &#x3D; \theta - \eta \nabla_\theta S(\theta)\]</li>
+<li>이 떄 $ eta $ 는 미리 정해진 learning rate(step size) 이고 보통 1e-3 ~ 1e-4 정도를 사용</li>
+</ul>
+<ol start="2">
+<li>역전파</li>
+</ol>
+<ul>
+<li><p>계산 그래프</p>
+</li>
+<li><p>노드는 연산을, 엣지는 데이터의 흐름방향<br> <img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%844/Letitgo_8.PNG" alt="Chain Rule"></p>
+</li>
+<li><p>sigmoid 함수 역전파<br> <img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%844/Letitgo_9.PNG" alt="sigmoidBP"></p>
+</li>
+<li><p>합성함수 미분법(Chain Rule)<br> <img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%844/Letitgo_10.PNG" alt="합성미분"></p>
+</li>
+<li><p>행렬연산과 역전파 1<br> <img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%844/Letitgo_11.PNG" alt="행렬역전파"></p>
+</li>
+<li><p>이진분류 2-layer NN 역전파<br> <img src="/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%844/Letitgo_12.PNG" alt="이진역전파"></p>
+</li>
+</ul>
+<blockquote>
+<p>to be continued…</p>
+</blockquote>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2020-11-22T19:44:55.000Z" title="2020. 11. 23. 오전 4:44:55">2020-11-23</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-04-05T06:19:36.732Z" title="2022. 4. 5. 오후 3:19:36">2022-04-05</time></span><span class="level-item"><a class="link-muted" href="/categories/Study/">Study</a></span><span class="level-item">a few seconds read (About 111 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/11/23/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9E%85%EB%AC%B8%EA%B3%BC-%EC%A4%80%EB%B9%843/">딥러닝-입문과-준비3</a></p><div class="content"><h2 id="딥러닝-시작해보기-3"><a href="#딥러닝-시작해보기-3" class="headerlink" title="딥러닝 시작해보기-3"></a>딥러닝 시작해보기-3</h2><h3 id="차원수-늘리기-줄이기-TF2-x"><a href="#차원수-늘리기-줄이기-TF2-x" class="headerlink" title="차원수 늘리기, 줄이기(TF2.x)"></a>차원수 늘리기, 줄이기(TF2.x)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x = tf.expand_dims(x, <span class="number">1</span>)</span><br><span class="line">x.shape <span class="comment"># (x.shape, 1)</span></span><br><span class="line"></span><br><span class="line">x[..., tf.newaxis].shape <span class="comment"># (x.shape, 1)</span></span><br><span class="line"></span><br><span class="line">np.squeeze(x[<span class="number">0</span>]).shape <span class="comment"># x.shape 차원 줄이기</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="TF2-x-Layers"><a href="#TF2-x-Layers" class="headerlink" title="TF2.x Layers"></a>TF2.x Layers</h3><p>Convolution</p>
+<ul>
+<li>filters : layer에서 출력될때 몇개의 filter</li>
+<li>kernel_size : filter(weight) 의 사이즈</li>
+<li>strides : 몇 개의 pixel만큼 skip하면서 sliding window 할 것인지</li>
+<li>padding : same, zero</li>
+<li>activation : 활성화 함수(<em>Linear function은 층을 쌓는 의미가 없다</em>)</li>
+</ul>
+<blockquote>
+<p>to be Continued…</p>
+</blockquote>
+</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/">Previous</a></div><div class="pagination-next"><a href="/page/3/">Next</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><a class="pagination-link is-current" href="/page/2/">2</a></li><li><a class="pagination-link" href="/page/3/">3</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="MELoDy-sigmax"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">MELoDy-sigmax</p><p class="is-size-6 is-block">Musical Data blog</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Seoul</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives/"><p class="title">23</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories/"><p class="title">6</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags/"><p class="title">12</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="me noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Competition/"><span class="level-start"><span class="level-item">Competition</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Game/"><span class="level-start"><span class="level-item">Game</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Study/"><span class="level-start"><span class="level-item">Study</span></span><span class="level-end"><span class="level-item tag">18</span></span></a><ul><li><a class="level is-mobile" href="/categories/Study/Dacon/"><span class="level-start"><span class="level-item">Dacon</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Study/Game/"><span class="level-start"><span class="level-item">Game</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Study/Kaggle-Dacon/"><span class="level-start"><span class="level-item">Kaggle, Dacon</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-10-06T01:36:26.000Z">2023-10-06</time></p><p class="title"><a href="/2023/10/06/music2motion-project/">music2motion_project</a></p><p class="categories"><a href="/categories/Study/">Study</a> / <a href="/categories/Study/Game/">Game</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-03-15T23:28:46.000Z">2023-03-16</time></p><p class="title"><a href="/2023/03/16/%EA%B2%8C%EC%9E%84%EA%B0%9C%EB%B0%9C-%EC%9D%BC%EA%B8%B02/">게임개발-일기2</a></p><p class="categories"><a href="/categories/Game/">Game</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-10-16T09:23:41.000Z">2022-10-16</time></p><p class="title"><a href="/2022/10/16/rl-video-summ/">rl-video-summ</a></p><p class="categories"><a href="/categories/Study/">Study</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-05T07:26:50.000Z">2022-04-05</time></p><p class="title"><a href="/2022/04/05/hello-world/">Hello World</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-05T07:26:50.000Z">2022-04-05</time></p><p class="title"><a href="/2022/04/05/bbackcheem/">bbackcheem</a></p></div></article></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/10/"><span class="level-start"><span class="level-item">October 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/03/"><span class="level-start"><span class="level-item">March 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/10/"><span class="level-start"><span class="level-item">October 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/04/"><span class="level-start"><span class="level-item">April 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/09/"><span class="level-start"><span class="level-item">September 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/07/"><span class="level-start"><span class="level-item">July 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/06/"><span class="level-start"><span class="level-item">June 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/01/"><span class="level-start"><span class="level-item">January 2021</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/12/"><span class="level-start"><span class="level-item">December 2020</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/11/"><span class="level-start"><span class="level-item">November 2020</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Audio/"><span class="tag">Audio</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DL/"><span class="tag">DL</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Dacon/"><span class="tag">Dacon</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Dev/"><span class="tag">Dev</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GAN/"><span class="tag">GAN</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linear-Algebra/"><span class="tag">Linear Algebra</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ML/"><span class="tag">ML</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Try/"><span class="tag">Try</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Unity/"><span class="tag">Unity</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/XR/"><span class="tag">XR</span><span class="tag">2</span></a></div></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Xeoner&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2024 Xeoner</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2024</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><script type="text/javascript" id="MathJax-script" async>MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
